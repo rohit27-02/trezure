@@ -1,0 +1,19 @@
+.carousel-container {
+  width: 65rem;
+  margin: 0 ;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 18%;
+
+
+}
+
+/* Rest of your CSS styles */
