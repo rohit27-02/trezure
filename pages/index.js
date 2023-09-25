@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Services from '../components/Services';
 import Showcase from '../components/Showcase';
 import Team from '../components/Team';
+import Popup from '../components/popup';
 
 export default function Home() {
   const items = [
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <div className=''>
+      <Popup/>
       <Carousel slides={items} autoPlayInterval={30000} />
       <Services/>
       <Projects/>

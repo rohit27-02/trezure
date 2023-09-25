@@ -5,9 +5,9 @@ import { BiLogoTwitter, BiLogoPinterestAlt, BiLogoInstagram, BiLogoFacebook } fr
 
 const Footer = () => {
   return (
-    <div className='h-[28.5rem] lighter bg-gray-darker'>
+    <div className='h-[31rem] lighter bg-gray-darker'>
       <div className='flex flex-col text-white py-[4.5rem] gap-[1rem] justify-center items-center'>
-        <img className='w-[10rem]' src="/logo.png" alt="logo" />
+        <img className='w-[10rem] invert' src="/logo.png" alt="logo" />
         <h1 className='text-2xl text-center tracking-widest'>Subscribe to get<br></br> our NewsLetter</h1>
         <div className='border-b text-lg'>
           <input type='email' placeholder='Enter Your Email...' className='outline-none w-[30rem] focus:text-white bg-transparent py-[0.5rem] border-none' />

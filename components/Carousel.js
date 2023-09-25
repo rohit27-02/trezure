@@ -31,7 +31,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
     }, [currentIndex, autoPlayInterval]);
 
     return (
-        <div className="slideshow w-screen">
+        <div className="slideshow w-screen overflow-hidden">
             {/* <Carousel
                 emulateTouch={true}
                 infiniteLoop={true}
@@ -74,7 +74,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
 
             
             
-            <iframe src="https://player.vimeo.com/video/570049428?muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="pexels-rodnae-productions-8580866" data-ready="true" className="elementor-background-video-embed " style={{width: "1278px", height: "720px"}}></iframe>
+            <iframe src="https://player.vimeo.com/video/570049428?muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="pexels-rodnae-productions-8580866" data-ready="true" className="elementor-background-video-embed " style={{width:"101%", height: "87%"}}></iframe>
         </div>
     );
 };
