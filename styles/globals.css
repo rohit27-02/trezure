@@ -116,4 +116,14 @@ a {
 .indicator:hover{
   color: #c3b8a5;
 }
+.logo-ticker-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  max-width: 200px; /* Adjust the maximum width of your logo */
+}
+
+
 

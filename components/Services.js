@@ -10,7 +10,7 @@ const Features = [
 
 const Services = () => {
     return (
-        <div className='h-[65vmin] flex flex-col  items-center max-w-[90rem] w-[80vmax] mx-auto'>
+        <div className='h-[18rem] flex flex-col  items-center max-w-[90rem] w-[80vmax] mx-auto'>
             <div className='flex gap-12 mb-[6rem]'>
                 {Features.map((feature) => {
                     return <div key={feature.heading} className='w-1/3'>
@@ -25,7 +25,7 @@ const Services = () => {
                     </div>
                 })}
             </div>
-            <Button text={"OUR SERVICES"} callback={() => { }} />
+            {/* <Button text={"OUR SERVICES"} callback={() => { }} /> */}
         </div>
     )
 }

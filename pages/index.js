@@ -6,7 +6,12 @@ import Projects from '../components/Projects';
 import Services from '../components/Services';
 import Showcase from '../components/Showcase';
 import Team from '../components/Team';
+import Testimonial from '../components/Testimonial';
 import Popup from '../components/popup';
+import Video from '../components/Video';
+import ContactForm from '../components/ContactForm';
+import Ticker from '../components/Ticker';
+import Category from '../components/category';
 
 export default function Home() {
   const items = [
@@ -25,11 +30,16 @@ export default function Home() {
     <div className=''>
       <Popup/>
       <Carousel slides={items} autoPlayInterval={30000} />
-      <Services/>
+      {/* <Services/> */}
+      <Category/>
+      <Video/>
       <Projects/>
       <Products/>
       <Aboutus/>
+      <ContactForm/>
       <Team/>
+      <Testimonial/>
+      <Ticker/>
       <Showcase  items={items}/>
     </div>
   )

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Router from 'next/router';
 import React, { useState, useEffect } from 'react'
+import { Fade } from 'react-awesome-reveal';
 import { RxCross2 } from "react-icons/rx";
 
 const Header = () => {
@@ -29,14 +30,14 @@ const Header = () => {
     Router.push(path)
   }
   return (
-    <div className={`px-[5rem] py-[1em] drop-shadow-md w-screen fixed top-0 z-50 text-gray-darker regular  justify-between transition-all duration-300 ease-out ${isScrolled ? "bg-white text-gray-darker" : "text-white"}`}>
-     
+    <div className={`px-[5rem] drop-shadow-md w-screen fixed top-0 z-50 text-gray-darker regular  justify-between transition-all duration-300 ease-out ${isScrolled ? "bg-white text-gray-darker" : "text-white"}`}>
+
       {/* navbar */}
       <div className='flex  items-center justify-between'>
         <img className='w-[10rem]' src='/logo.png' alt='logo' />
         <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 text-lg medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
-      
+
       {/* navabar window */}
       <div className={`w-screen flex absolute text-gray-darker z-50 bg-[#f6f6f6] top-0 left-0  transition-all duration-500 ease-out h-screen ${selected ? "translate-y-0 " : "-translate-y-full"}`}>
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
@@ -52,14 +53,16 @@ const Header = () => {
           </div>
         </div>
 
-        <div className='mx-[10rem] flex flex-col justify-center gap-[3rem]'>
-          <div className='text-4xl flex flex-col gap-[2rem] font-medium [&>*]:cursor-pointer'>
-            <div onClick={() => route("/")} className='hover:text-brown-light transition-all duration-300 ease-out'>HOME</div>
-            <div onClick={() => route("/story")} className='hover:text-brown-light transition-all duration-300 ease-out'>STORY</div>
-            <div onClick={() => route("/collections")} className='hover:text-brown-light transition-all duration-300 ease-out'>COLLECTIONS</div>
-            <div onClick={() => route("/projects")} className='hover:text-brown-light transition-all duration-300 ease-out'>PROJECTS</div>
-            <div onClick={() => route("/blogs")} className='hover:text-brown-light transition-all duration-300 ease-out'>BLOGS</div>
-            <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT</div>
+        <div className='mx-[10rem] flex flex-col justify-center '>
+          <div className='text-2xl flex flex-col gap-[1.5rem] font-medium [&>*]:cursor-pointer'>
+            <Fade duration={500} direction='up' cascade >
+              <div onClick={() => route("/")} className='hover:text-brown-light transition-all duration-300 ease-out'>HOME</div>
+              <div onClick={() => route("/story")} className='hover:text-brown-light transition-all duration-300 ease-out'>STORY</div>
+              <div onClick={() => route("/collections")} className='hover:text-brown-light transition-all duration-300 ease-out'>COLLECTIONS</div>
+              <div onClick={() => route("/projects")} className='hover:text-brown-light transition-all duration-300 ease-out'>PROJECTS</div>
+              <div onClick={() => route("/blogs")} className='hover:text-brown-light transition-all duration-300 ease-out'>BLOGS</div>
+              <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT</div>
+            </Fade>
             <div className='flex text-xs gap-[2.5rem] mt-[4rem] text-gray-dark'>
               <button className='hover:text-gray-darker transition-all duration-300'>Terms & Conditions</button>
               <button className='hover:text-gray-darker transition-all duration-300'>Privacy Policy</button>
