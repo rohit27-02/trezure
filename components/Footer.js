@@ -30,7 +30,7 @@ const Footer = () => {
             <button className='hover:text-white transition-all duration-300'>Contact</button>
           </div>
         </div>
-        <h2 className='tracking-[0.2rem] mt-[2rem] w-fit mx-auto text-xs'>COPYRIGHT 2022 © TREZURE. ALL RIGHTS RESERVED.</h2>
+        <h2 className='tracking-[0.2rem] mt-[2rem] w-fit mx-auto text-xs'>COPYRIGHT 2023 © TREZURE. ALL RIGHTS RESERVED.</h2>
       </div>
 
     </div>

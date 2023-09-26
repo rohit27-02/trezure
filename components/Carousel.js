@@ -47,7 +47,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
             </div>
 
 
-            {/* <div className="slideshow w-screen overflow-hidden">
+            {/* <div className="slideshow relative w-screen overflow-hidden">
                 <Carousel
                     emulateTouch={true}
                     infiniteLoop={true}
@@ -68,7 +68,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
                     })}
 
                 </Carousel>
-                <div className="slide-indicators shadow-xl">
+                <div className=" absolute bottom-[6rem] right-0 flex shadow-xl">
                     {slides.map((_, index) => (
                         <div
                             key={index}

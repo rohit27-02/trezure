@@ -11,7 +11,6 @@ import Popup from '../components/popup';
 import Video from '../components/Video';
 import ContactForm from '../components/ContactForm';
 import Ticker from '../components/Ticker';
-import Category from '../components/category';
 
 export default function Home() {
   const items = [
@@ -30,8 +29,7 @@ export default function Home() {
     <div className=''>
       <Popup/>
       <Carousel slides={items} autoPlayInterval={30000} />
-      {/* <Services/> */}
-      <Category/>
+      <Services/>
       <Video/>
       <Projects/>
       <Products/>

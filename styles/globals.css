@@ -92,14 +92,6 @@ a {
   object-fit: contain;
 }
 
-.slide-indicators {
-  position: absolute;
-  display: flex;
-  bottom: 0;
-  right: 0;
-  
-}
-
 .indicator {
   background-color: white;
   height: 7vmax;
