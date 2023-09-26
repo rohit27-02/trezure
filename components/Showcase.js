@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Showcase = () => {
     return (
-        <div className='overflow-hidden w-[80vmax] mx-auto pb-[4rem]'>
+        <div className='overflow-hidden w-[80vmax] mx-auto pb-[4rem] cursor-grab'>
             <Carousel
                 autoPlay={true}
                 emulateTouch={true}
@@ -18,6 +18,7 @@ const Showcase = () => {
                 centerMode={true}
                 centerSlidePercentage={25}
                 autoFocus={true}
+                interval={2000}
                 
             >
                 <div className='m-4'>

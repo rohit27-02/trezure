@@ -34,7 +34,7 @@ const Header = () => {
 
       {/* navbar */}
       <div className='flex  items-center justify-between'>
-        <img className='w-[10rem]' src='/logo.png' alt='logo' />
+        <img className={`w-[10rem] transition-all duration-300 ${isScrolled?"invert-0":"invert"}`} src='/logo.png' alt='logo' />
         <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 text-lg medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
 

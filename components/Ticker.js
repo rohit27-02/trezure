@@ -3,22 +3,22 @@ import React from 'react';
 import Marquee from "react-fast-marquee";
 
 const companyIcons = [
-    "/projects/1.jpg",
-    "/projects/2.jpg",
-    "/projects/3.jpg",
-    "/carousel/3.png",
-    "/carousel/1.png",
-    "/carousel/2.png",
+    "/clients/city.jpg",
+    "/clients/debrah.jpg",
+    "/clients/higold.jpg",
+    "/clients/kelvin.jpg",
+    "/clients/m&d.jpg",
+    "/clients/violino.jpg",
 
 ]
 
 const LogoTicker = () => {
     return (
         <section className='mx-auto w-[65rem]'>
-            <div className=' '>
+            {/* <div className=' '>
                 <h2 className='text-[#c3b8a5] tracking-[0.4rem]'>OUR</h2>
                 <h1 className='text-[40px] tracking-wider medium'>CLIENTS</h1>
-            </div>
+            </div> */}
             <div className='flex flex-col text-center justify-center'>
 
                 <Marquee className='mt-10 w-[100rem]'>

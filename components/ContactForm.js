@@ -15,7 +15,7 @@ const ContactForm = () => {
                     <input placeholder='Email Address' />
                     <textarea className='h-[7rem]' placeholder='Leave a message' />
                 </form>
-                <button className='text-lg px-[1rem] my-[1rem] py-[0.5rem] border hover:bg-brown-light hover:drop-shadow-xl hover:border-gray-darker transition-all duration-200 w-fit'>Send a message</button>
+                <button className='text-lg px-[1rem] my-[1rem] py-[0.5rem] border hover:bg-brown-light hover:drop-shadow-xl hover:border-gray-darker transition-all duration-200 w-fit'>DOWNLOAD BROCHURE</button>
             </div>
             </Fade>
         </div>

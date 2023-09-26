@@ -25,12 +25,14 @@ a {
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "niveau";
   src: url('../fonts/HVD Fonts - NiveauGroteskRegular.otf');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "niveau";
   src: url('../fonts/HVD Fonts - NiveauGroteskMedium.otf');
@@ -56,6 +58,7 @@ a {
   font-weight: 500;
   font-style: normal;
 }
+
 .regular {
   font-family: 'niveau', sans-serif;
   font-weight: 400;
@@ -103,19 +106,21 @@ a {
 }
 
 .indicator.active {
- color: #c3b8a5;
-}
-.indicator:hover{
   color: #c3b8a5;
 }
+
+.indicator:hover {
+  color: #c3b8a5;
+}
+
 .logo-ticker-container {
   width: 100%;
   overflow: hidden;
 }
 
 .logo {
-  max-width: 200px; /* Adjust the maximum width of your logo */
+  max-width: 200px;
+  /* Adjust the maximum width of your logo */
 }
-
 
 

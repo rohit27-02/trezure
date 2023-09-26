@@ -15,30 +15,30 @@ import Ticker from '../components/Ticker';
 export default function Home() {
   const items = [
     <div key={1} className=" carousel-content">
-      <img src='/projects/1.jpg' alt='carousel image'/>
+      <img src='/projects/1.jpg' alt='carousel image' />
     </div>,
     <div key={2} className=" carousel-content">
-      <img src='/projects/2.jpg' alt='carousel image'/>
+      <img src='/projects/2.jpg' alt='carousel image' />
     </div>,
     <div key={3} className="carousel-content">
-      <img src='/projects/3.jpg' alt='carousel image'/>
+      <img src='/projects/3.jpg' alt='carousel image' />
     </div>,
   ];
 
   return (
     <div className=''>
-      <Popup/>
+      <Popup />
       <Carousel slides={items} autoPlayInterval={30000} />
-      <Services/>
-      <Video/>
-      <Projects/>
-      <Products/>
-      <Aboutus/>
-      <ContactForm/>
-      <Team/>
-      <Testimonial/>
-      <Ticker/>
-      <Showcase  items={items}/>
+      <Services />
+      <Video />
+      <Projects />
+      <Products />
+      <Aboutus />
+      <ContactForm />
+      <Team />
+      <Ticker />
+      <Testimonial />
+      <Showcase items={items} />
     </div>
   )
 }
