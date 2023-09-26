@@ -34,7 +34,7 @@ const Header = () => {
 
       {/* navbar */}
       <div className='flex  items-center justify-between'>
-        <img className={`w-[10rem] transition-all duration-300 ${isScrolled?"invert-0":"invert"}`} src='/logo.png' alt='logo' />
+        <img onClick={()=>Router.push("/")} className={`w-[10rem] cursor-pointer transition-all duration-300 ${isScrolled?"invert-0":"invert"}`} src='/logo.png' alt='logo' />
         <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 text-lg medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
       <div className={`w-screen flex absolute text-gray-darker z-50 bg-[#f6f6f6] top-0 left-0  transition-all duration-500 ease-out h-screen ${selected ? "translate-y-0 " : "-translate-y-full"}`}>
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
         <div className='w-[25rem] h-full flex flex-col justify-between'>
-          <img className='w-[15rem] mx-auto py-[5rem]' src='/logo.png' alt='logo' />
+          <img onClick={()=>route("/")} className='w-[15rem] cursor-pointer mx-auto py-[5rem]' src='/logo.png' alt='logo' />
           <div className='flex flex-col justify-center items-center bg-white px-[3rem] py-[5rem] '>
             <p>3131 94th St, East Elmhurst, New York</p>
             <p>(808) 555-0111</p>

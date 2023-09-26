@@ -33,7 +33,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
     return (
         <div className=''>
             <div className="relative w-full flex justify-center pb-[56.25%]">
-                <Fade triggerOnce direction='up' duration={2000} className='tracking-[1rem] z-10 drop-shadow-lg mt-[14rem] text-center text-7xl text-white absolute' >
+                <Fade triggerOnce direction='up' delay={2000} duration={2000} className='tracking-[1rem] z-10 drop-shadow-lg mt-[14rem] text-center text-7xl text-white absolute' >
                     <h1 >LUXURY<br />FURNITURE</h1>
                 </Fade>
                 <iframe
