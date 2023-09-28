@@ -13,11 +13,6 @@ const Showcase = () => {
         "products/Grey-Outdoor-Lounge-Chair.jpg",
     ];
 
-    // Clone the first and last items and add them to the carousel items
-    const clonedFirstItems = carouselItems.slice(0, 4); // Clone the first 4 items
-    const clonedLastItems = carouselItems.slice(carouselItems.length - 4); // Clone the last 4 items
-    const itemsToShow = [...clonedLastItems, ...carouselItems, ...clonedFirstItems];
-
     const settings = {
         infinite: true,
         autoplay: true,
@@ -33,7 +28,7 @@ const Showcase = () => {
     return (
         <div className='overflow-hidden w-[70rem] mx-auto pb-[4rem] cursor-grab'>
             <Slider {...settings}>
-                {itemsToShow.map((item, index) => (
+                {carouselItems.map((item, index) => (
                     <div key={index} className='p-6'>
                         <img src={item} alt={`Carousel Item ${index}`} />
                     </div>

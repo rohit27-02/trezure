@@ -20,7 +20,7 @@ const Team = () => {
                     <h2 className='text-[#c3b8a5] tracking-[0.4rem]'>OUR TEAM</h2>
                     <h1 className='text-[40px] tracking-wider medium'>OUR TALENT TEAM</h1>
                     <p className='text-gray-light text-lg my-[2rem]'>Feugiat sed lectus vestibulum mattis ullamcorper. Duis at consectetur lorem donec massa</p>
-                    <Button text={"VIEW MORE"} callback={() => { }} />
+                    <Button text={"VIEW MORE"} path={"/story#team"} />
                 </Fade>
             </div>
             <div className='flex gap-[2rem] w-[35rem] flex-wrap'>

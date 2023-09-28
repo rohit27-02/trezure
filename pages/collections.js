@@ -42,7 +42,7 @@ const Collections = () => {
                 <h1 className='absolute bottom-[6rem] tracking-[1rem] text-5xl w-fit  p-[4rem] bg-white text-gray-darker medium text-right leading-[4rem]'>DECORE<br></br> YOUR <br></br>DREAMS<br /><GoArrowDownRight className='float-right text-7xl' /></h1>
             </div>
             <div className='text-gray-light '>
-                <div className=''>
+                <div id="home" className=''>
                     <div className='flex items-center h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-2/5'>
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>HOME</h1>
@@ -77,7 +77,7 @@ const Collections = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-stone-100'>
+                <div id="outdoor" className='bg-stone-100'>
                     <div className='flex flex-row-reverse text-right items-center h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-1/2'>
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OUTDOOR</h1>
@@ -89,7 +89,7 @@ const Collections = () => {
                         <div></div>
                     </div>
                 </div>
-                <div className=''>
+                <div id="office" className=''>
                     <div className='flex items-center h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-1/2'>
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h1>

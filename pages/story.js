@@ -181,7 +181,7 @@ const Story = () => {
       </div>
 
       {/* our team  */}
-      <div className='mx-auto w-[70rem] py-[3rem]'>
+      <div id='team' className='mx-auto w-[70rem] py-[3rem]'>
 
         <Fade direction='up' cascade triggerOnce>
           <h2 className='cool text-[54px] text-brown-light w-fit mx-auto '>members</h2>

@@ -20,11 +20,11 @@ const Aboutus = () => {
                 </div>
                 <div>
                     <div className='regular w-[25rem] float-right'>
-                        <Fade triggerOnce direction='up' cascade duration={2000}>
+                        <Fade triggerOnce direction='up' cascade duration={1500}>
                             <h2 className='text-[#c3b8a5] tracking-[0.4rem]'>ABOUT US</h2>
                             <h1 className='text-[40px] tracking-wider medium'>BEST FURNITURE AT THE BEST PRICE</h1>
                             <p className='text-gray-light text-lg my-[2rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet lectus proin</p>
-                            <Button text={"MORE ABOUT US"} callback={() => { }} />
+                            <Button text={"MORE ABOUT US"} path={"/story"} />
                         </Fade>
                     </div>
                 </div>

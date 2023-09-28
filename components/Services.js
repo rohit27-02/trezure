@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import { Fade} from 'react-awesome-reveal'
+import { Fade } from 'react-awesome-reveal'
+import Button from './Button'
 
 const Category = () => {
   return (
@@ -17,6 +18,9 @@ const Category = () => {
               <img src="projects/1.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
             <h1>HOME</h1>
+            <div className='mt-[1rem] '>
+              <Button text={"know more"} path={"/collections#home"} />
+            </div>
           </div>
 
           <div>
@@ -24,6 +28,9 @@ const Category = () => {
               <img src="projects/2.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
             <h1>OUTDOOR</h1>
+            <div className='mt-[1rem] '>
+              <Button text={"know more"} path={"/collections#outdoor"} />
+            </div>
           </div>
 
           <div>
@@ -31,11 +38,14 @@ const Category = () => {
               <img src="projects/3.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
             <h1>OFFICE</h1>
+            <div className='mt-[1rem] '>
+              <Button text={"know more"} path={"/collections#office"} />
+            </div>
           </div>
         </Fade>
 
-
       </div>
+
     </div>
   )
 }
