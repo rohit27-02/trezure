@@ -1,18 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
-import Button from './Button';
 import { Fade } from 'react-awesome-reveal';
 
-const PRODUCTS = [
-    { "img": "/products/6-Drawer-Dresser.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Black-2-Drawer-Nightstand.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Desk-with-Outlet.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Edge-Coupe-Glass.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Grey-Outdoor-Lounge-Chair.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Grotta-Outdoor-Wicker-Sofa.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Natural-Baby-Crib.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-    { "img": "/products/Roll-Arm-Queen-Sleeper-Sofa.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
-]
+// const PRODUCTS = [
+//     { "img": "/products/6-Drawer-Dresser.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Black-2-Drawer-Nightstand.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Desk-with-Outlet.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Edge-Coupe-Glass.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Grey-Outdoor-Lounge-Chair.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Grotta-Outdoor-Wicker-Sofa.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Natural-Baby-Crib.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+//     { "img": "/products/Roll-Arm-Queen-Sleeper-Sofa.jpg", "name": "6-Drawer Dresser", "price": "3000", "type": "Living Room" },
+// ]
 
 const Products = () => {
     const [category, setcategory] = useState("Living Room");

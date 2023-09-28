@@ -73,7 +73,7 @@ const Slug = () => {
           </a>
         )
       },
-      strong:({children})=>{
+      strong: ({ children }) => {
         return <h1 className='text-gray-darker text-lg bold'>
           {children}
         </h1>
@@ -84,8 +84,13 @@ const Slug = () => {
   }
 
   return (
-    <>
-      {post && <div className='container regular text-gray-dark w-[70rem] py-[5rem] space-y-6 mx-auto'>
+    <div className='bg-[#fcfbfa]'>
+      {/* banner */}
+      <div className='w-full h-[30rem] relative overflow-hidden flex justify-center items-center'>
+        <img src='/contactform.jpg' className='object-contain w-full brightness-50' alt='banner image' />
+        <h1 className='text-[4.5rem] text-gray-200 drop-shadow absolute medium tracking-widest'>Blog</h1>
+      </div>
+      {post && <div className='container regular text-gray-dark w-[70rem]  space-y-6 mx-auto'>
         <h1 className='text-4xl text-gray-darker mt-[6rem] bold'>{post.title}</h1>
         <div className='flex text-gray-darker border-t-2 py-4 border-gray-500 gap-6 text-xl font-bold items-center'>
           <img className='rounded-full w-16 h-16  object-cover object-center' src={post.author.image.asset.url} alt='author image'></img>
@@ -100,7 +105,7 @@ const Slug = () => {
           />
         </div>
       </div>}
-    </>
+    </div>
   )
 }
 

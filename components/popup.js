@@ -6,7 +6,6 @@ const Popup = () => {
     const [popup, setpopup] = useState(false);
     const [show, setshow] = useState(false);
     setTimeout(() => {
-        console.log(sessionStorage.getItem("popup"))
         if (sessionStorage.getItem("popup")) {
 
         } else {

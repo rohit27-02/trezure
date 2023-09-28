@@ -1,34 +1,17 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable @next/next/no-img-element */
+import React, { useState } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { Fade } from 'react-awesome-reveal';
-const Slideshow = ({ slides, autoPlayInterval }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [index, setindex] = useState(0);
-    const Items = [
-        { "img": "/projects/1.jpg", "index": "01.", "title": "HOME" },
-        { "img": "/projects/2.jpg", "index": "02.", "title": "OUTDOOR" },
-        { "img": "/projects/3.jpg", "index": "03.", "title": "KITCHEN" },
-    ]
+import Button from './Button';
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-        );
-    };
-
-    // Auto-play functionality
-    useEffect(() => {
-        const interval = setInterval(nextSlide, autoPlayInterval);
-        return () => clearInterval(interval);
-    }, [currentIndex, autoPlayInterval]);
+const Items = [
+    { "img": "/elements/bg1.jpg", "index": "01.", "title": "HOME", slogan: "you want, we build", path: "/collections#home" },
+    { "img": "/elements/bg2.jpg", "index": "02.", "title": "OUTDOOR", slogan: "crafted beauty", path: "/collections#outdoor" },
+    { "img": "/elements/bg3.jpg", "index": "03.", "title": "OFFICE", slogan: "choose comfort", path: "/collections#office" },
+]
+const Slideshow = () => {
+    const [currentIndex, setcurrentIndex] = useState(0);
 
     return (
         <div className=''>
@@ -37,7 +20,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
                     <h1 >LUXURY<br />FURNITURE</h1>
                 </Fade>
                 <iframe
-                    className="absolute inset-0 w-full h-full"
+                    className="absolute  inset-0 w-full h-full"
                     src="https://player.vimeo.com/video/570049428?muted=1&amp;autoplay=1&amp;loop=1&amp;transparent=0&amp;background=1&amp;app_id=122963"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"
@@ -47,7 +30,7 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
             </div>
 
 
-            {/* <div className="slideshow relative w-screen overflow-hidden">
+            <div className=" relative w-full">
                 <Carousel
                     emulateTouch={true}
                     infiniteLoop={true}
@@ -55,32 +38,59 @@ const Slideshow = ({ slides, autoPlayInterval }) => {
                     showStatus={false}
                     showThumbs={false}
                     autoFocus={true}
-                    selectedItem={1}
-                    onChange={(i) => setindex(i)}
+                    selectedItem={currentIndex}
+                    interval={5000}
+                    onChange={(i) => setcurrentIndex(i)}
                     autoPlay={true}
+                    showArrows={false}
 
                 >
                     {Items.map((item, i) => {
-                        return <div key={i} >
-                            <img src={item.img} alt='' />
+                        return <div key={i} className={`relative cursor-grab transition-all duration-300 ease-linear ${i == currentIndex ? "scale-100" : "scale-95"}`}>
+                            <img className='-z-20' src={item.img} alt='' />
+                            <div className='absolute top-[30%]  drop-shadow-sm left-[4rem] text-left tracking-widest bold text-white'>
+                                <h2 className='text-lg'>FURNITURE STORE</h2>
+                                <h1 className='text-[5rem] w-[32rem] mb-[3rem] leading-[5.5rem] uppercase'>{item.slogan}</h1>
+                                <Button text={"EXPLORE NOW"} path={item.path} />
+                            </div>
+
+                            {currentIndex == 0 ?
+                                (<div>
+                                    <img className='h-[22rem]  absolute -right-[7rem] top-[10rem] z-20' src='/elements/bed.png' alt='element' />
+                                    <img className='h-[13rem] absolute top-[16rem] -right-[19rem] z-10' src='/elements/drawer.png' alt='element' />
+                                    <div className='w-[25rem] h-[25rem] rounded-full bg-stone-300 absolute top-[10rem] right-[10rem] opacity-80 z-0'></div>
+                                </div>)
+                                : currentIndex == 1 ?
+                                    (<div>
+                                        <img className='h-[16rem]  absolute -right-[7rem] top-[16rem] z-20' src='/elements/6-drawer.png' alt='element' />
+                                        <div className='w-[25rem] h-[25rem] rounded-full bg-stone-100 absolute top-[10rem] right-[10rem] opacity-80 z-0'></div>
+                                    </div>)
+                                    : (<div>
+                                        <img className='h-[12rem]  absolute -right-[11rem] top-[18rem] z-20' src='/elements/sofa.png' alt='element' />
+                                        <img className='h-[19rem] absolute top-[10rem] -right-[25rem] z-10' src='/elements/lamp.png' alt='element' />
+                                        <div className='w-[25rem] h-[25rem] rounded-full bg-gray-200 absolute top-[10rem] right-[10rem] opacity-80 z-0'></div>
+                                    </div>)}
+
 
                         </div>
                     })}
 
                 </Carousel>
-                <div className=" absolute bottom-[6rem] right-0 flex shadow-xl">
-                    {slides.map((_, index) => (
+                <div className=" absolute bottom-0 right-0 flex ">
+                    {Items.map((_, index) => (
                         <div
                             key={index}
                             className={`indicator ${index === currentIndex ? 'active' : ''}`}
-                            onClick={() => setCurrentIndex(index)}
+                            onClick={() => setcurrentIndex(index)}
                         >
-                            <h1 className='medium text-xl'>{Items[index].index}<br></br><span className='regular text-xl'>{Items[index].title}</span></h1>
+                            <Fade direction='up' cascade triggerOnce >
+                                <h1 className='text-xl'>{Items[index].index}<br></br><span className='regular text-xl'>{Items[index].title}</span></h1>
 
+                            </Fade>
                         </div>
                     ))}
                 </div>
-            </div> */}
+            </div>
         </div>
 
     );

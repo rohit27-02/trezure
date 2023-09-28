@@ -1,11 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
 const contact = () => {
     return (
         <div className='text-gray-darker'>
-            <div class="bg-[url('/banner.jpg')] h-[25rem] flex justify-center items-center medium text-white w-screen">
-                <h1 className='text-[4.5rem]'>Contact Us</h1>
-            </div>
+
+      {/* banner */}
+      <div className='w-full h-[30rem] relative overflow-hidden flex justify-center items-center'>
+        <img src='/contactform.jpg' className='object-contain w-full brightness-50' alt='banner image' />
+        <h1 className='text-[4.5rem] text-gray-200 drop-shadow absolute medium tracking-widest'>Contact Us</h1>
+      </div>
+
             <div className='w-[80vmax] flex gap-[4rem] max-w-[90rem] my-[7rem] mx-auto'>
                 <div className='w-[45%] gap-[1rem] flex flex-col'>
                     <h1 className='text-4xl medium'>YOUR INFORMATION</h1>

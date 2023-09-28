@@ -13,22 +13,10 @@ import ContactForm from '../components/ContactForm';
 import Ticker from '../components/Ticker';
 
 export default function Home() {
-  const items = [
-    <div key={1} className=" carousel-content">
-      <img src='/projects/1.jpg' alt='carousel image' />
-    </div>,
-    <div key={2} className=" carousel-content">
-      <img src='/projects/2.jpg' alt='carousel image' />
-    </div>,
-    <div key={3} className="carousel-content">
-      <img src='/projects/3.jpg' alt='carousel image' />
-    </div>,
-  ];
-
   return (
     <div className=''>
       <Popup />
-      <Carousel slides={items} autoPlayInterval={30000} />
+      <Carousel />
       <Services />
       <Video />
       <Projects />
@@ -38,7 +26,7 @@ export default function Home() {
       <Team />
       <Ticker />
       <Testimonial />
-      <Showcase items={items} />
+      <Showcase/>
     </div>
   )
 }

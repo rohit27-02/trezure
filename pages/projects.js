@@ -16,6 +16,12 @@ const projects = () => {
   return (
     <div className='regular  text-gray-darker'>
 
+      {/* banner */}
+      <div className='w-full h-[30rem] relative overflow-hidden flex justify-center items-center'>
+        <img src='/contactform.jpg' className='object-contain w-full brightness-50' alt='banner image' />
+        <h1 className='text-[4.5rem] text-gray-200 drop-shadow absolute medium tracking-widest'>PROJECTS</h1>
+      </div>
+
       {/* intro  */}
       <div className='flex w-[70rem] my-[5rem] justify-between mx-auto h-[40rem] '>
         <div className='bg-[url("/projects/2.jpg")] w-[55%] h-full'></div>
@@ -24,7 +30,7 @@ const projects = () => {
           <Fade direction='up' duration={1000} triggerOnce >
             <h1 className='text-5xl bold'>Our Project</h1>
           </Fade>
-            <p className='text-gray-light text-justify'>Our highly efficient and proficient team makes sure that you are worthy of depicting a class and beauty that reigns supreme and takes priority over anything ordinary. Our project execution process is profoundly intertwined with our culture of stopping at nothing short of the best.From the time of preparation and sourcing, quality management to shipment and everything in between, we guarantee that every aspect of the project implementation process is managed with the utmost accuracy, while at the same time keeping a close watch on even the tiniest element involved.</p>
+          <p className='text-gray-light text-justify'>Our highly efficient and proficient team makes sure that you are worthy of depicting a class and beauty that reigns supreme and takes priority over anything ordinary. Our project execution process is profoundly intertwined with our culture of stopping at nothing short of the best.From the time of preparation and sourcing, quality management to shipment and everything in between, we guarantee that every aspect of the project implementation process is managed with the utmost accuracy, while at the same time keeping a close watch on even the tiniest element involved.</p>
 
         </div>
       </div>
@@ -38,8 +44,8 @@ const projects = () => {
 
               <div className='flex items-center gap-[1rem]'>
                 <Fade cascade direction='up' triggerOnce>
-                <img className='w-[3rem] ' src={feature.icon} alt={feature.title} />
-                <h1 className='text-xl medium'>{feature.title}</h1>
+                  <img className='w-[3rem] ' src={feature.icon} alt={feature.title} />
+                  <h1 className='text-xl medium'>{feature.title}</h1>
                 </Fade>
               </div>
               <p className='text-gray-light lighter'>{feature.des}</p>
