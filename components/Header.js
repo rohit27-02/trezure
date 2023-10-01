@@ -3,6 +3,7 @@ import Router from 'next/router';
 import React, { useState, useEffect } from 'react'
 import { Fade } from 'react-awesome-reveal';
 import { RxCross2 } from "react-icons/rx";
+import Social from './Social';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,30 +31,33 @@ const Header = () => {
     Router.push(path)
   }
   return (
-    <div className={`px-[5rem] drop-shadow-md w-screen fixed top-0 z-50 text-gray-darker regular  justify-between transition-all duration-300 ease-out ${isScrolled ? "bg-white text-gray-darker" : "text-white"}`}>
+    <div className={`md:px-[5rem] px-[1rem] drop-shadow-md w-screen fixed top-0 z-50 text-gray-darker regular  justify-between transition-all duration-300 ease-out ${isScrolled ? "bg-white text-gray-darker" : "text-white"}`}>
+
+      {/* social link  */}
+      <Social />
 
       {/* navbar */}
       <div className='flex  items-center justify-between'>
-        <img onClick={()=>Router.push("/")} className={`w-[10rem] cursor-pointer transition-all duration-300 ${isScrolled?"invert-0":"invert"}`} src='/logo.png' alt='logo' />
-        <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 text-lg medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
+        <img onClick={() => Router.push("/")} className={`md:w-[10rem] w-[7rem] cursor-pointer transition-all duration-300 ${isScrolled ? "invert-0" : "invert"}`} src='/logo.png' alt='logo' />
+        <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 md:text-lg text-sm medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
 
       {/* navabar window */}
       <div className={`w-screen flex absolute text-gray-darker z-50 bg-[#f6f6f6] top-0 left-0  transition-all duration-500 ease-out h-screen ${selected ? "translate-y-0 " : "-translate-y-full"}`}>
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
-        <div className='w-[25rem] h-full flex flex-col justify-between'>
-          <img onClick={()=>route("/")} className='w-[15rem] cursor-pointer mx-auto py-[5rem]' src='/logo.png' alt='logo' />
+        <div className='w-[25rem] h-full max-sm:hidden flex flex-col justify-between'>
+          <img onClick={() => route("/")} className='w-[15rem] cursor-pointer mx-auto py-[5rem]' src='/logo.png' alt='logo' />
           <div className='flex flex-col justify-center items-center bg-white px-[3rem] py-[5rem] '>
             <p>3131 94th St, East Elmhurst, New York</p>
             <p>(808) 555-0111</p>
-            <p>deanna.curtis@example.com</p>
+            <a href='mailto:contact@trezurecasa.com' className='hover:text-brown-light'>contact@trezurecasa.com</a>
             <div className='flex'>
             </div>
             <p className='text-[10px] text-gray-dark tracking-widest'>COPYRIGHT 2023 © TREZURE. ALL RIGHTS RESERVED.</p>
           </div>
         </div>
 
-        <div className='mx-[10rem] flex flex-col justify-center '>
+        <div className='md:mx-[10rem] mx-[4rem] flex flex-col justify-center'>
           <div className='text-2xl flex flex-col gap-[1.5rem] font-medium [&>*]:cursor-pointer'>
             <Fade duration={500} direction='up' cascade >
               <div onClick={() => route("/")} className='hover:text-brown-light transition-all duration-300 ease-out'>HOME</div>
@@ -63,7 +67,7 @@ const Header = () => {
               <div onClick={() => route("/blogs")} className='hover:text-brown-light transition-all duration-300 ease-out'>BLOGS</div>
               <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT</div>
             </Fade>
-            <div className='flex text-xs gap-[2.5rem] mt-[4rem] text-gray-dark'>
+            <div className='flex text-xs  gap-[2.5rem] mt-[18rem] md:mt-[4rem] text-gray-dark'>
               <button className='hover:text-gray-darker transition-all duration-300'>Terms & Conditions</button>
               <button className='hover:text-gray-darker transition-all duration-300'>Privacy Policy</button>
               <button className='hover:text-gray-darker transition-all duration-300'>Help Center</button>

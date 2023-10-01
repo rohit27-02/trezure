@@ -20,6 +20,30 @@ const Story = () => {
   const controlx = useAnimation();
   const controlyminus = useAnimation();
 
+  const [isMobile, setIsMobile] = useState(false);
+  const [percentage, setpercentage] = useState(33.3);
+
+  useEffect(() => {
+    // Check the screen width and update isMobile accordingly
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 400);
+      if (isMobile) {
+        setpercentage(100)
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -54,17 +78,17 @@ const Story = () => {
     <div className='regular text-gray-dark'>
 
       {/* banner */}
-      <div className='w-full h-[30rem] overflow-hidden '>
+      <div className='w-full md:h-[30rem] overflow-hidden '>
         <img src='/contactform.jpg' className='object-contain w-full brightness-50' alt='banner image' />
       </div>
 
       {/* about us */}
-      <div className='flex py-[6rem]'>
-        <img className='w-1/3' src='/about.jpg' alt='banner logo' />
-        <div className='w-[40rem] text-justify mx-[6rem] flex flex-col gap-[1rem]'>
+      <div className='flex py-8 md:py-[6rem]'>
+        <img className='max-sm:hidden w-1/3' src='/about.jpg' alt='banner logo' />
+        <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[1rem]'>
           <Fade cascade direction='up' triggerOnce>
-            <h1 className='text-4xl bold text-gray-darker'>ABOUT US</h1>
-            <p className='medium text-gray-darker'>We are India&apos;s finest global furniture outlet spread across 65,000sq.ft., catering to residential, commercial & outdoor luxury furniture segments.</p>
+            <h1 className='md:text-4xl text-xl bold text-gray-darker'>ABOUT US</h1>
+            <p className='medium  text-gray-darker'>We are India&apos;s finest global furniture outlet spread across 65,000sq.ft., catering to residential, commercial & outdoor luxury furniture segments.</p>
             <p>
               Trezure exemplifies elegance through its tastefully curated merchandise, eclectic designs, and graceful colour tint; we showcase and provide a globally-sourced selection of home, outdoor & office furniture, besides a selective collection of delicate fabrics, artifacts.</p>
             <p>
@@ -78,29 +102,29 @@ const Story = () => {
       </div>
 
       {/* how we do  */}
-      <div className='bg-[#faf8f3] h-[42rem] p-[4rem]'>
-        <div className='w-[70rem] mx-auto flex justify-between items-center'>
+      <div className='bg-[#faf8f3] max-sm:h-[54rem] h-[42rem] p-6 md:p-[4rem]'>
+        <div className='w-[20rem] md:w-[70rem] mx-auto flex max-sm:flex-col justify-between md:items-center'>
           <div className='relative'>
             <motion.img
               src="/about/about-bg-4.jpg"
               alt="Animated Image"
-              className="transition-all duration-300 ease-linear z-10 w-[16rem]  top-[24rem] left-[16rem] absolute "
+              className="transition-all duration-300 ease-linear z-10 max-sm:w-[8rem] w-[16rem] top-[20rem] md:top-[24rem] left-[12rem] md:left-[16rem] absolute "
               initial={{ opacity: 100, y: 0 }}
               animate={controly}
             />
             <motion.img
               src="/about/about-bg-3.jpg"
               alt="Animated Image"
-              className="transition-all duration-300 ease-linear w-[28rem] -mt-[10rem]"
+              className="transition-all duration-300 ease-linear max-sm:w-[16rem] w-[28rem] -mt-[3rem] md:-mt-[10rem]"
               initial={{ opacity: 100, y: 0 }}
               animate={controlyminus}
             />
 
           </div>
-          <div className=' w-[25rem] flex flex-col '>
+          <div className='w-[20rem] max-sm:mt-[8rem] md:w-[25rem] flex flex-col '>
             <Fade cascade triggerOnce direction='up'>
               <h1 className='text-4xl medium text-gray-darker'>How we do</h1>
-              <p className='text-gray-light mt-[1rem]'>Through the seamless coordination between our warehousing facility, Flagship, and Franchise Stores, we bring the world-class designer products to you— each one globally sourced after undergoing stringent quality checks.</p>
+              <p className='text-gray-light max-sm:text-sm mt-[1rem]'>Through the seamless coordination between our warehousing facility, Flagship, and Franchise Stores, we bring the world-class designer products to you— each one globally sourced after undergoing stringent quality checks.</p>
             </Fade>
 
             <div ref={ref} className='flex flex-col gap-[1rem] mt-[2rem]'>
@@ -181,11 +205,11 @@ const Story = () => {
       </div>
 
       {/* our team  */}
-      <div id='team' className='mx-auto w-[70rem] py-[3rem]'>
+      <div id='team' className='mx-auto max-sm:w-[24rem] w-[70rem] py-[1rem] md:py-[3rem]'>
 
         <Fade direction='up' cascade triggerOnce>
-          <h2 className='cool text-[54px] text-brown-light w-fit mx-auto '>members</h2>
-          <h1 className='text-4xl mx-auto w-fit -mt-[1.5rem] mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h1>
+          <h2 className='cool text-[54px] max-sm:text-[40px] text-brown-light w-fit mx-auto '>members</h2>
+          <h1 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h1>
         </Fade>
         <Carousel
           emulateTouch={true}
@@ -193,11 +217,12 @@ const Story = () => {
           showIndicators={false}
           showStatus={false}
           showThumbs={false}
-          autoFocus={true}
-          centerMode={true}
-          centerSlidePercentage={33.3}
+          centerMode={!isMobile} // Set centerMode based on isMobile
+          centerSlidePercentage={percentage}
+          autoFocus={!isMobile}
           selectedItem={1}
-          className='relative px-[8rem] py-[3rem]'
+          showArrows={!isMobile}
+          className='relative md:px-[8rem] py-4 md:py-[3rem]'
           renderArrowPrev={(onClickHandler, hasPrev) =>
             hasPrev && <div onClick={onClickHandler} className='flex items-center hover:bottom-0 hover:invert transition-all duration-300 absolute top-[6rem] left- z-20 bg-white  cursor-pointer  border-gray-darker border h-[3rem] w-[3rem] justify-center rounded-full text-xl'>
               <GrPrevious /></div>
@@ -220,13 +245,13 @@ const Story = () => {
       </div>
 
       {/* newsletter  */}
-      <div className='bg-[url("/about/newsletter-bg.jpg")] tracking-wide bg-top  bg-cover w-full h-[22rem] flex items-center justify-center'>
-        <div className='w-[70rem] flex justify-center items-center flex-col'>
-          <h1 className='text-4xl pb-[0.2rem] text-white'>NEWLETTER</h1>
-          <p className='text-gray-300'>Keep up to date with our latest news and special offers.</p>
-          <div className='h-[3rem] w-[40rem] my-[2rem]'>
-            <input className='outline-none text-lg h-full w-[80%] p-[1rem]' type='text' placeholder='Email address' />
-            <button className='text-xl hover:bg-gray-darker transition-all duration-300 ease-out bg-brown-light h-full w-[20%] text-white'>Subscribe</button>
+      <div className='bg-[url("/about/newsletter-bg.jpg")] tracking-wide bg-top bg-no-repeat bg-cover w-full h-[22rem] flex items-center justify-center'>
+        <div className='w-[24rem] md:w-[70rem] flex justify-center items-center flex-col'>
+          <h1 className='text-4xl max-sm:text-xl pb-[0.2rem] max-sm:pb-[1.5rem] text-white'>NEWLETTER</h1>
+          <p className='text-gray-300 max-sm:text-sm'>Keep up to date with our latest news and special offers.</p>
+          <div className='h-[3rem] max-sm:h-[2.5rem] w-[20rem] md:w-[40rem] my-[2rem]'>
+            <input className='outline-none text-lg rounded-none max-sm:text-sm h-full w-[80%] max-sm:w-[70%] p-[1rem]' type='text' placeholder='Email address' />
+            <button className='text-xl max-sm:text-sm  hover:bg-gray-darker transition-all duration-300 ease-out bg-brown-light h-full max-sm:w-[30%] w-[20%] text-white'>Subscribe</button>
           </div>
         </div>
       </div>

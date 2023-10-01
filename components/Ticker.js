@@ -14,11 +14,8 @@ const companyIcons = [
 
 const LogoTicker = () => {
     return (
-        <section className='mx-auto w-[65rem]'>
-            {/* <div className=' '>
-                <h2 className='text-[#c3b8a5] tracking-[0.4rem]'>OUR</h2>
-                <h1 className='text-[40px] tracking-wider medium'>CLIENTS</h1>
-            </div> */}
+        <section className='mx-auto w-[65rem] max-sm:w-[22rem]'>
+
             <div className='flex flex-col text-center justify-center'>
 
                 <Marquee className='mt-10 w-[100rem]'>

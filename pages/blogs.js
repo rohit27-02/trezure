@@ -34,8 +34,8 @@ const Blog = () => {
                 {/* banner  */}
                 <div className='bg-[url("/blog.jpg")] bg-no-repeat bg-cover flex justify-center items-center gap-[2rem] flex-col w-full h-[42rem]'>
                     <Fade direction='up' cascade triggerOnce delay={1000}>
-                        <h1 className='text-5xl bold'>Trezure Blog</h1>
-                        <p className='text-gray-light text-center w-[40rem]'>Trezure is a pioneer of the finest and contemporary assortment of internationally sourced designer furniture and artifacts from the best in class global brands.</p>
+                        <h1 className='text-2xl md:text-5xl bold'>Trezure Blog</h1>
+                        <p className='text-gray-light text-center w-[20rem] md:w-[40rem]'>Trezure is a pioneer of the finest and contemporary assortment of internationally sourced designer furniture and artifacts from the best in class global brands.</p>
 
                         {/* search bar  */}
                         <div class="relative">
@@ -45,7 +45,7 @@ const Blog = () => {
                                 type="text"
                                 id="Search"
                                 placeholder="Search for..."
-                                class="w-[30rem] drop-shadow border-gray-200 py-2.5 ps-4 pe-10 shadow-sm "
+                                class="w-[20rem] md:w-[30rem] drop-shadow border-gray-200 py-2.5 ps-4 pe-10 shadow-sm "
                             />
 
                             <span class="absolute inset-y-0 end-0 grid w-10 place-content-center">
@@ -71,7 +71,7 @@ const Blog = () => {
                         </div>
 
                         {/* category  */}
-                        <div className='flex gap-[1rem]'>
+                        <div className='flex flex-wrap mx-auto max-sm:w-[20rem] gap-[1rem]'>
                             {category.map((item) => {
                                 return <button className='text-gray-dark px-[1rem] py-[0.2rem] text-sm border-gray-dark hover:border-brown-light hover:text-brown-light transition-all duration-150 ease-out border rounded-full' key={item}>{item}</button>
                             })}
@@ -80,20 +80,17 @@ const Blog = () => {
                 </div>
 
                 {/* blogs  */}
-                <div className='w-[65rem] -mt-[6rem] flex justify-between flex-wrap mx-auto'>
+                <div className='w-[20rem] md:w-[65rem] -mt-[6rem] flex justify-between flex-wrap mx-auto'>
                     {posts && posts.map((post) => {
-                        return <div key={post.id} className=" w-[48%] ">
+                        return <div key={post.id} className=" md:w-[48%] ">
                             <Fade direction='up' triggerOnce >
                                 <div className="h-full">
-                                    <div className='relative h-[21rem] w-full overflow-hidden'>
+                                    <div className='relative h-[16rem] md:h-[21rem] w-full overflow-hidden'>
                                         <img className=" absolute inset-0 object-cover hover:scale-105 transition-all duration-300 ease-linear w-full h-full" src={post.mainImage.asset.url} alt="blog" />
                                     </div>
                                     <div className="flex flex-col gap-[1rem] mt-[1rem]">
-                                        <h2 className="tracking-[0.2rem]  uppercase text-gray-light ">{post._createdAt.slice(0, 10)} - BY {post.author.name}</h2>
-                                        <h1 className="title-font text-2xl medium ">{post.title}</h1>
-                                        {/* {post.des?.map((text)=>{
-                                        return <p key={text} className="leading-relaxed tracking-wider text-gray-light ">{text.text}</p>
-                                    })} */}
+                                        <h2 className="tracking-[0.2rem] max-sm:text-sm uppercase text-gray-light ">{post._createdAt.slice(0, 10)} - BY {post.author.name}</h2>
+                                        <h1 className="title-font md:text-2xl medium ">{post.title}</h1>
                                         <div className="flex items-center mb-[4rem] hover:text-brown-light group transition-all duration-300 ease-out tracking-widest flex-wrap ">
                                             <a onClick={() => localStorage.setItem("slug", post.slug)} href={`/post/${post.slug}/?slug=${post.slug}`} className=" inline-flex items-center md:mb-2 lg:mb-0">
                                                 <span className='border-t w-8 group-hover:border-brown-light border-gray-darker mr-4'></span>

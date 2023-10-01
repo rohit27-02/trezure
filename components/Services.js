@@ -5,19 +5,19 @@ import Button from './Button'
 
 const Category = () => {
   return (
-    <div className='py-[4rem] text-gray-darker'>
-      <div className=' w-[70rem] mx-auto pb-[1rem]'>
-        <h2 className='text-[#c3b8a5] tracking-[0.4rem]'>OUR</h2>
-        <h1 className='text-[40px] tracking-wider medium'>COLLECTIONS</h1>
+    <div className='py-[4rem] max-sm:py-[2rem] max-sm:text-xs text-gray-darker'>
+      <div className='max-sm:w-[20rem] w-[70rem] mx-auto pb-[1rem]'>
+        <h2 className='text-[#c3b8a5] text-xs tracking-[0.4rem]'>OUR</h2>
+        <h1 className='md:text-[40px] text-xl tracking-wider medium'>COLLECTIONS</h1>
       </div>
-      <div className='flex tracking-wider w-[70rem] justify-between mx-auto medium text-xl'>
+      <div className='flex max-sm:flex-col max-sm:gap-[2rem] tracking-wider max-sm:w-[20rem] w-[70rem] justify-between mx-auto medium text-xl'>
         <Fade triggerOnce cascade direction='up'>
 
           <div>
             <div className="relative w-[19rem] mb-4 overflow-hidden h-[18rem] pb-[100%] ">
               <img src="projects/1.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
-            <h1>HOME</h1>
+            <h1 className='max-sm:text-sm'>HOME</h1>
             <div className='mt-[1rem] '>
               <Button text={"know more"} path={"/collections#home"} />
             </div>
@@ -27,7 +27,7 @@ const Category = () => {
             <div className="relative w-[19rem] mb-4 overflow-hidden h-[18rem] pb-[100%] ">
               <img src="projects/2.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
-            <h1>OUTDOOR</h1>
+            <h1 className='max-sm:text-sm'>OUTDOOR</h1>
             <div className='mt-[1rem] '>
               <Button text={"know more"} path={"/collections#outdoor"} />
             </div>
@@ -37,7 +37,7 @@ const Category = () => {
             <div className="relative w-[19rem] mb-4 overflow-hidden h-[18rem] pb-[100%] ">
               <img src="projects/3.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
-            <h1>OFFICE</h1>
+            <h1 className='max-sm:text-sm'>OFFICE</h1>
             <div className='mt-[1rem] '>
               <Button text={"know more"} path={"/collections#office"} />
             </div>
