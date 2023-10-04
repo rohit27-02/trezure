@@ -7,9 +7,9 @@ const playvideo = () => {
                 <source className='' src="video.mp4" type="video/mp4" />
             </video>
             <div className='absolute  '>
-                <h1 className='cursor-pointer hover:text-brown-light transition-all duration-300'>PLAY VIDEO</h1>
+                <h1 className='cursor-pointer hover:text-brown-light transition-all duration-300'>CORPORATE VIDEO</h1>
             </div>
-                <p className='absolute mt-[20rem] max-sm:hidden tracking-normal min-w-fit'>Viverra nibh cras pulvinar mattis nunc sed blandit.</p>
+            <p className='absolute mt-[20rem] text-center text-sm md:w-[50rem] drop-shadow max-sm:hidden tracking-normal '>With an experience of over four decades up our sleeves, our rise into a luxurious furniture segment has been splendid, filled with the richness of talent and magnificence. Shouldering a responsibility to enhance our heritage further, we are committed to serving our clients with only the best in class experience.</p>
         </div>
     )
 }

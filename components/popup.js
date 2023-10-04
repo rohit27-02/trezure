@@ -5,12 +5,17 @@ import { AiOutlineMail } from 'react-icons/ai';
 const Popup = () => {
     const [popup, setpopup] = useState(false);
     const [show, setshow] = useState(false);
-    if (typeof window !== 'undefined' && sessionStorage.getItem("popup")) {
+    const [email, setemail] = useState('');
+    setTimeout(() => {
+        if (typeof window !== 'undefined' && sessionStorage.getItem("popup")) {
 
-    } else {
-        setTimeout(() => {
+        } else {
             setpopup(true)
-        }, 3000);
+        }
+    }, 3000);
+
+    const handleSubmit =()=>{
+        
     }
 
 
@@ -23,8 +28,8 @@ const Popup = () => {
                     <h1 className='text-2xl bold text-brown-light tracking-widest underline-offset-8 underline'>Newsletter</h1>
                     <p className='lighter text-dark'>Enter your email address to subscribe our notification of our new post & features by email</p>
                     <div className='border-b flex text-lg'>
-                        <input type='email' placeholder='Enter Your Email...' className='outline-none w-[20rem] focus:text-gray-dark bg-transparent py-[0.5rem] border-none' />
-                        <button><AiOutlineMail className='text-brown-light text-2xl hover:text-gray-darker transition-all duration-300' /></button>
+                        <input type='email' onChange={(e)=>setemail(e.target.value)} value={email} placeholder='Enter Your Email...' className='outline-none w-[20rem] focus:text-gray-dark bg-transparent py-[0.5rem] border-none' />
+                        <button onClick={handleSubmit}><AiOutlineMail className='text-brown-light text-2xl hover:text-gray-darker transition-all duration-300' /></button>
                     </div>
 
                     <div className="flex  items-center">

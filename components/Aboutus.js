@@ -22,8 +22,8 @@ const Aboutus = () => {
                     <div className='regular max-sm:w-[20rem] w-[25rem] float-right'>
                         <Fade triggerOnce direction='up' cascade duration={1500}>
                             <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>ABOUT US</h2>
-                            <h1 className='text-[40px] max-sm:text-xl tracking-wider medium'>BEST FURNITURE AT THE BEST PRICE</h1>
-                            <p className='text-gray-light max-sm:text-sm text-lg max-sm:my-[1rem] my-[2rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id aliquet lectus proin</p>
+                            <h1 className='text-[40px] max-sm:text-xl tracking-wider medium'>We are India&apos;s finest global furniture outlet spread across 65,000sq.ft.</h1>
+                            <p className='text-gray-light max-sm:text-sm text-lg max-sm:my-[1rem] my-[2rem]'>We invite you to come and be part of a global lifestyle phenomenon by embellishing your space in a way that reflects your distinct taste and is aesthetically stunning— Because &quot;LUXURY IS UNIVERSAL.&quot;</p>
                             <Button text={"MORE ABOUT US"} path={"/story"} />
                         </Fade>
                     </div>

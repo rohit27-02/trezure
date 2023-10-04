@@ -44,7 +44,7 @@ const projects = () => {
                   <h1 className='text-xl medium'>{feature.title}</h1>
 
                 </div>
-                <p className='text-gray-light lighter'>{feature.des}</p>
+                <p className='text-gray-light mt-[1rem] lighter'>{feature.des}</p>
               </div>
             </Fade>
           })

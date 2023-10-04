@@ -46,14 +46,12 @@ const Header = () => {
       <div className={`w-screen flex absolute text-gray-darker z-50 bg-[#f6f6f6] top-0 left-0  transition-all duration-500 ease-out h-screen ${selected ? "translate-y-0 " : "-translate-y-full"}`}>
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
         <div className='w-[25rem] h-full max-sm:hidden flex flex-col justify-between'>
-          <img onClick={() => route("/")} className='w-[15rem] cursor-pointer mx-auto py-[5rem]' src='/logo.png' alt='logo' />
-          <div className='flex flex-col justify-center items-center bg-white px-[3rem] py-[5rem] '>
-            <p>3131 94th St, East Elmhurst, New York</p>
-            <p>(808) 555-0111</p>
+          <img onClick={() => route("/")} className='w-[15rem] cursor-pointer mx-auto py-[3rem]' src='/logo.png' alt='logo' />
+          <div className='flex flex-col justify-center text-center gap-2 items-center bg-white px-[3rem] py-[5rem] '>
+            <p>Building No. C-2, Gala No. 1 to 6, Bridge, Chamunda Complex, Taluka, near Kasheli, Kalher, Bhiwandi, Thane, Maharashtra 421302</p>
+            <p>8097019222</p>
             <a href='mailto:contact@trezurecasa.com' className='hover:text-brown-light'>contact@trezurecasa.com</a>
-            <div className='flex'>
-            </div>
-            <p className='text-[10px] text-gray-dark tracking-widest'>COPYRIGHT 2023 © TREZURE. ALL RIGHTS RESERVED.</p>
+            <p className='text-[10px] text-gray-dark mt-[1rem] tracking-widest'>COPYRIGHT 2023 © TREZURE. ALL RIGHTS RESERVED.</p>
           </div>
         </div>
 
