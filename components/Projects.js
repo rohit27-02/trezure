@@ -33,13 +33,14 @@ const Projects = () => {
                     selectedItem={1}
                     onChange={(i) => setindex(i)}
                     autoPlay={true}
+                    interval={3000}
+                    stopOnHover={false}
 
                 >
                     {Items.map((item, i) => {
-                        return <div key={i} className={`md:m-[4rem] m-[2rem] w-[20rem] md:w-[55rem] group transition-all duration-700 overflow-hidden ease-linear  ${i == index ? " cursor-pointer shadow-[0_0px_90px_70px_rgba(51,51,51,0.8)] z-20" : "scale-75 brightness-75 opacity-80"}`}>
-                           <div className='md:h-[30rem] h-[15rem] overflow-hidden w-full relative'>
+                        return <div key={i} className={`md:m-[4rem] relative m-[2rem] md:h-[30rem] h-[15rem] w-[20rem] md:w-[40rem] group transition-all duration-700 overflow-hidden ease-linear  ${i == index ? " cursor-pointer shadow-[0_0px_90px_70px_rgba(51,51,51,0.8)] z-20" : "scale-75 brightness-75 opacity-80"}`}>
                            <img className={`ease-out transition-all absolute inset-0 duration-500 w-full h-full object-cover ${i == index ? "group-hover:scale-110" : ""}`} src={item.img} />
-                           </div>
+                        
                         </div>
                     })}
 

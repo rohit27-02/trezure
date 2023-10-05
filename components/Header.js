@@ -55,7 +55,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className='md:mx-[10rem] mx-[4rem] flex flex-col justify-center'>
+        <div className='md:mx-[10rem] mx-[4rem] flex flex-col  justify-evenly'>
           <div className='text-2xl flex flex-col gap-[1.5rem] font-medium [&>*]:cursor-pointer'>
             <Fade duration={500} direction='up' cascade >
               <div onClick={() => route("/")} className='hover:text-brown-light transition-all duration-300 ease-out'>HOME</div>
@@ -65,12 +65,12 @@ const Header = () => {
               <div onClick={() => route("/blogs")} className='hover:text-brown-light transition-all duration-300 ease-out'>BLOGS</div>
               <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT</div>
             </Fade>
-            <div className='flex text-xs  gap-[2.5rem] mt-[18rem] md:mt-[4rem] text-gray-dark'>
+          </div>
+            <div className='flex text-xs  gap-[2.5rem]  md:mt-[4rem] text-gray-dark'>
               <button className='hover:text-gray-darker transition-all duration-300'>Terms & Conditions</button>
               <button className='hover:text-gray-darker transition-all duration-300'>Privacy Policy</button>
               <button className='hover:text-gray-darker transition-all duration-300'>Help Center</button>
             </div>
-          </div>
         </div>
       </div>
 
