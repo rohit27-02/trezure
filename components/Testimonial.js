@@ -13,10 +13,6 @@ const Items = [
   { img: "/testimonial/6.jpg", name: "Mrs. Rishita Seth", location: "Principal Designer, Artisanal story", content: "We went to Trezure store to source sofas for our new home. We had been to a few stores before and had walked out dissapointed but the minute we entered his showroom, there were some amazing choices, beautiful fabrics and a plethora of variety to choose from. We decided on our design and pattern, they were very flexible about fabric choices etc, allowed complete customisation of colours. it was perfect. We have been using the sofas since 2 years and they have been great, no complaints! Great experience, would highly recommend them!" },
 ]
 
-// Clone the first item and place it at the end of the array
-const clonedFirstItem = { ...Items[0] };
-Items.push(clonedFirstItem);
-
 const Testimonial = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [percentage, setpercentage] = useState(33.3);

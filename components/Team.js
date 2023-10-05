@@ -4,17 +4,17 @@ import Button from './Button'
 import { Fade } from 'react-awesome-reveal'
 
 const Members = [
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
-    { "name": "Carl", "img": "/members/1.avif", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
+    { "name": "Carl", "img": "/members/1.jpeg", "title": "CEO" },
 ]
 
 const Team = () => {
     return (
-        <div className='mx-auto flex max-sm:flex-col gap-[2rem] items-center max-sm:h-[35rem] h-[40rem] text-gray-darker w-fit regular'>
+        <div className='mx-auto flex max-sm:flex-col gap-[2rem] items-center max-sm:h-[55rem] h-[40rem] text-gray-darker w-fit regular'>
             <div className='regular max-sm:w-[20rem] w-[30rem] '>
                 <Fade cascade direction='up' triggerOnce>
                     <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>OUR TEAM</h2>
@@ -24,11 +24,7 @@ const Team = () => {
                 </Fade>
             </div>
             <div className='flex md:gap-[2rem] gap-2 max-sm:w-[22rem] w-[35rem] flex-wrap'>
-                
-               <div className='h-[15rem] w-full relative'>
-               <img className='absolute w-full inset-0 h-full object-cover' src='/group photo.jpg' alt='team members photo'/>
-               </div>
-                {/* {Members.map((member) => {
+                {Members.map((member) => {
                     return <div key={member.name} className='w-[10rem] h-[12rem] relative group overflow-hidden'>
                         <img className='object-cover h-full group-hover:sepia-[50%] transition-all duration-300' src={member.img} alt={member.name} />
                         <div className='w-full h-2/5 translate-y-full absolute bottom-0 z-10 group-hover:translate-y-1  flex flex-col bg-white transition-all duration-300 justify-center items-center'>
@@ -36,7 +32,7 @@ const Team = () => {
                             <p className='text-xs text-gray-light'>{member.title}</p>
                         </div>
                     </div>
-                })} */}
+                })}
             </div>
         </div>
     )
