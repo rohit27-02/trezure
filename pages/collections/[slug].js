@@ -64,7 +64,7 @@ const Home = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ path: folder == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${folder}` }),
+            body: JSON.stringify({ path: folder == "all" ? `\public /collections/${path}` : `\public/collections/${path}/${folder}` }),
         }).then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
