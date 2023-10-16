@@ -129,7 +129,7 @@ function readFilesFromSubfolders(folderPath, fileNames = []) {
 export async function getStaticPaths() {
     // Fetch a list of possible values for [slug]
     // This could be based on the actual folder structure or another source
-    const possibleSlugs = ['home', 'outdoor', 'office']; // Replace with your actual slugs
+    const possibleSlugs = ['home', 'outdoor']; // Replace with your actual slugs
 
     // Create an array of paths to pre-render
     const paths = possibleSlugs.map((slug) => ({
