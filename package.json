@@ -16,6 +16,7 @@
     "@sanity/client": "^6.4.12",
     "@sanity/image-url": "^1.0.2",
     "framer-motion": "^10.16.4",
+    "fs": "^0.0.1-security",
     "next": "13.5.2",
     "next-sanity": "^5.5.4",
     "nodemailer": "^6.9.5",

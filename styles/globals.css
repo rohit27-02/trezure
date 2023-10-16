@@ -163,14 +163,3 @@ a {
   max-width: 200px;
   /* Adjust the maximum width of your logo */
 }
-.skeleton-image{
-  height: 200px;
-  width: 320px;
-  border-radius: 6px;
-  background: #E5E4E2;
-  margin-top: 10px;
- }
- .skeleton{
-  margin-bottom: 2em;
-  animation: scale 4s infinite;
- }

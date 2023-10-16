@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import Router from 'next/router'
 import Banner from '../../components/Banner';
 import Image from 'next/image';
+import fs from 'fs'
+import path from 'path';
 
 const Variants = {
     home: {
@@ -20,62 +22,59 @@ const Variants = {
     }
 }
 
-const imageLoader = () => {
-    return <div className='skeleton'>
-        <div className='skeleton-image'></div>
-    </div>
-}
 
-const Home = () => {
+const Home = ({allimages}) => {
     const [path, setpath] = useState("");
-    const [images, setimages] = useState([]);
+     const [images, setimages] = useState(allimages);
     const [active, setactive] = useState('all');
 
     useEffect(() => {
-
         setpath(Router.query.slug);
 
     }, []);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        fetch("../api/getfiles", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ path: active == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${active}` }),
-        }).then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-            .then((data) => {
-                setimages(data)
-                console.log(data)
-            })
-            .catch((error) => console.error(error));
-    }, [path]);
+    //     fetch("../api/getfiles", {
+    //         method: "POST",
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ path: active == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${active}` }),
+    //     }).then((response) => {
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         return response.json();
+    //     })
+    //         .then((data) => {
+    //             setimages(data)
+    //             console.log(data)
+    //         })
+    //         .catch((error) => console.error(error));
+    // }, [path]);
 
-    const fetchImages = (folder) => {
-        fetch("../api/getfiles", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ path: folder == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${folder}` }),
-        }).then((response) => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-            .then((data) => {
-                setimages(data)
-                console.log(data)
-            })
-            .catch((error) => console.error(error));
+    // const fetchImages = (folder) => {
+    //     fetch("../api/getfiles", {
+    //         method: "POST",
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({ path: folder == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${folder}` }),
+    //     }).then((response) => {
+    //         if (!response.ok) {
+    //             throw new Error('Network response was not ok');
+    //         }
+    //         return response.json();
+    //     })
+    //         .then((data) => {
+    //             setimages(data)
+    //             console.log(data)
+    //         })
+    //         .catch((error) => console.error(error));
+    // }
+    const fetchImages = (folder)=>{
+        folder == 'all'?setimages(allimages):setimages( allimages.filter((image)=>{ return image.includes(folder)}))
     }
     return (
         <>
@@ -93,7 +92,7 @@ const Home = () => {
                         </div>
                         <div className='flex flex-wrap '>
                             {
-                                images.map((image) => {
+                                images?.map((image) => {
                                     return <div key={image.split("\\").join("/").slice(6,)} className='relative m-[0.6rem] w-[22rem] h-[24rem]'>
                                         <Image fill loading='lazy'  src={image.split("\\").join("/").slice(6,)} alt={image.split("\\").join("/").slice(6,)} />
                                     </div>
@@ -110,3 +109,53 @@ const Home = () => {
 }
 
 export default Home
+
+// Function to recursively read files from subfolders
+function readFilesFromSubfolders(folderPath, fileNames = []) {
+    console.log(folderPath)
+    const files = fs.readdirSync(path.resolve(folderPath));
+    for (const file of files) {
+        const filePath = path.join(folderPath, file);
+        if (fs.statSync(filePath).isDirectory()) {
+            readFilesFromSubfolders(filePath, fileNames);
+        } else {
+            fileNames.push(filePath);
+        }
+    }
+    return fileNames;
+}
+
+
+export async function getStaticPaths() {
+    // Fetch a list of possible values for [slug]
+    // This could be based on the actual folder structure or another source
+    const possibleSlugs = ['home', 'outdoor', 'office']; // Replace with your actual slugs
+
+    // Create an array of paths to pre-render
+    const paths = possibleSlugs.map((slug) => ({
+        params: { slug },
+    }));
+
+    return {
+        paths,
+        fallback: false, // or 'blocking' if you want to handle missing slugs differently
+    };
+}
+
+export async function getStaticProps(context) {
+    // Replace 'your-folder-path' with the actual folder path you want to read
+    const folderPath = context.params.slug;
+    const fileNames = readFilesFromSubfolders(`\public/collections/${folderPath}`);
+
+    return {
+        props: {
+            allimages:fileNames,
+        },
+    };
+}
+
+
+
+
+
+
