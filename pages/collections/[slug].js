@@ -4,6 +4,7 @@ import Router from 'next/router';
 import Banner from '../../components/Banner';
 import fs from 'fs';
 import path from 'path';
+import Image from 'next/image';
 
 const Variants = {
     home: {
@@ -21,27 +22,16 @@ const Variants = {
 }
 
 const Home = ({ allimages }) => {
+    // ... (other code)
+
     const [path, setPath] = useState("");
     const [images, setImages] = useState(allimages);
     const [active, setActive] = useState('all');
-    const [imageLoadStatus, setImageLoadStatus] = useState({});
     const [loadingImages, setLoadingImages] = useState(true);
 
     useEffect(() => {
         setPath(Router.query.slug);
     }, []);
-
-    useEffect(() => {
-        const loadStatus = {};
-        images.forEach((image, index) => {
-            const img = new Image();
-            img.src = image.split('\\').join('/').slice(6);
-            img.onload = () => {
-                loadStatus[index] = true;
-                setImageLoadStatus({ ...loadStatus });
-            };
-        });
-    }, [images]);
 
     const fetchImages = (folder) => {
         if (folder === 'all') {
@@ -53,10 +43,12 @@ const Home = ({ allimages }) => {
     };
 
     useEffect(() => {
-        if (Object.keys(imageLoadStatus).length === images.length) {
-            setLoadingImages(false);
-        }
-    }, [imageLoadStatus, images]);
+        setLoadingImages(true); // Set loading state to true when changing images
+    }, [images]);
+
+    useEffect(() => {
+        setLoadingImages(false); // Set loading state to false when all images have loaded
+    }, [images, loadingImages]);
 
     return (
         <>
@@ -65,25 +57,30 @@ const Home = ({ allimages }) => {
                     <Banner text={`Collections - ${path}`} />
                     <div className='flex flex-col text-center gap-[1.5rem] py-8 md:py-[5rem] text-gray-darker regular w-[22rem] md:w-[70rem] mx-auto'>
                         <h2 className='medium text-xl'>{Variants[path] ? Variants[path]['caption'] : ''}</h2>
-                        <div className='flex max-sm:overflow-x-scroll mx-auto gap-[1rem] uppercase'>
-                            {Variants[path]
-                                ? Variants[path]['category'].map((name) => (
-                                    <div onClick={() => { setActive(name); fetchImages(name) }} key={name} className={`${active === name ? "border bg-brown-light" : ""} p-[1rem] cursor-pointer transition-all duration-300`}>
-                                        {name}
-                                    </div>
-                                ))
-                                : null}
+                        <div className='max-sm:overflow-x-scroll mx-auto'>
+                            <div className='max-sm:w-[80rem] flex mx-auto gap-[1rem] uppercase'>
+                                {Variants[path]
+                                    ? Variants[path]['category'].map((name) => (
+                                        <div onClick={() => { setActive(name); fetchImages(name) }} key={name} className={`${active === name ? "border bg-brown-light" : ""} p-[1rem] cursor-pointer transition-all duration-300`}>
+                                            {name}
+                                        </div>
+                                    ))
+                                    : null}
+                            </div>
                         </div>
                         <div className='flex flex-wrap'>
                             {images?.map((image, index) => (
-                                <div key={index} className='relative m-[0.6rem] w-[22rem] h-[24rem]'>
-                                    {loadingImages || !imageLoadStatus[index] ? (
+                                <div key={index} className='relative  m-[0.6rem] rounded-md overflow-hidden w-[22rem] h-[24rem]'>
+                                    {loadingImages ? (
                                         <div className='skeleton-image'></div>
                                     ) : (
-                                        <img
-                                            loading='lazy'
+                                        <Image
+                                            width={352}
+                                            height={384}
+                                            className='absolute inset-0 object-cover h-full w-full'
                                             src={image.split('\\').join('/').slice(6)}
                                             alt={image.split('\\').join('/').slice(6)}
+                                            loading="lazy"
                                         />
                                     )}
                                 </div>
@@ -98,7 +95,6 @@ const Home = ({ allimages }) => {
 
 export default Home;
 
-// ... Rest of the code
 
 
 // Function to recursively read files from subfolders
