@@ -90,14 +90,14 @@ const Collections = () => {
                         <div className="relative">
                             <img src="/animation/table.jpg" className="w-[16rem] md:w-[14rem] md:mr-[12rem]" alt="table" />
                             <motion.img
-                                src="/animation/sofa 1.png"
+                                src="/animation/sofa1.png"
                                 alt="Animated Image"
                                 className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] left-[4rem] md:left-[2rem] top-[17rem] md:-top-[1rem] absolute "
                                 initial={{ opacity: 100, y: 0 }}
                                 animate={controlx}
                             />
                             <motion.img
-                                src="/animation/sofa 2.png"
+                                src="/animation/sofa2.png"
                                 alt="Animated Image"
                                 className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] -left-[20rem] md:left-[1rem] -top-[1rem] md:-top-[1rem] absolute"
                                 initial={{ opacity: 100, x: 0 }}
