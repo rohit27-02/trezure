@@ -5,6 +5,7 @@ import Banner from '../../components/Banner';
 import fs from 'fs';
 import path from 'path';
 import Image from 'next/image';
+import { Fade } from 'react-awesome-reveal';
 
 const Variants = {
     home: {
@@ -70,7 +71,8 @@ const Home = ({ allimages }) => {
                         </div>
                         <div className='flex flex-wrap'>
                             {images?.map((image, index) => (
-                                <div key={index} className='relative  m-[0.6rem] rounded-md overflow-hidden w-[22rem] h-[24rem]'>
+                                <Fade direction='up' cascade triggerOnce="true" key={index}>
+                                    <div  className='relative  m-[0.6rem] rounded-md overflow-hidden w-[22rem] h-[24rem]'>
                                     {loadingImages ? (
                                         <div className='skeleton-image'></div>
                                     ) : (
@@ -84,6 +86,7 @@ const Home = ({ allimages }) => {
                                         />
                                     )}
                                 </div>
+                                </Fade>
                             ))}
                         </div>
                     </div>

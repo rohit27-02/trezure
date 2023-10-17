@@ -50,7 +50,7 @@ const Collections = () => {
                             <p>Gorgeous range of global furniture infused with character and charm galore— seamlessly fitting into your first and second homes and equally enticing for a contemporary setting.
                                 The most extensive assortment of home furniture collection laced with contemporary designs, trending in the international circles and built to last.
                                 Stunning, superb, and stylish porch furniture collection to bring your outdoors to life.</p>
-                            <button onClick={()=>Router.push("/collections/home")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <button onClick={() => Router.push("/collections/home")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
                         </div>
                         <div className="relative">
                             <img src="/animation/sofa.png" className="max-sm:w-[14rem] max-sm:ml-[1rem] w-[24rem] ml-[10rem]" alt="sofa" />
@@ -79,15 +79,32 @@ const Collections = () => {
                     </div>
                 </div>
                 <div id="outdoor" className='bg-stone-100'>
-                    <div className='flex max-sm:flex-col-reverse max-sm:w-[24rem] max-sm:py-10 flex-row-reverse text-right items-center h-[80vh] max-sm:gap-[8rem] md:h-screen w-[80vmax] max-w-[90rem] mx-auto'>
+                    <div className='flex max-sm:flex-col-reverse max-sm:w-[24rem] max-sm:py-10  flex-row-reverse text-right items-center h-[80vh] max-sm:gap-[8rem] md:h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OUTDOOR</h1>
                             <p>An impressive variety of patio furniture and accent pieces to impart a similar sense of sophistication and poise to your outdoor space that is found inside your home.
                                 Lose track of time in the company of your loved ones, lazing comfortably in our hand-picked global outdoor furniture range.
                                 Stunning and Ergonomic assortments sourced from the globally renowned designer furniture brands.</p>
-                            <button onClick={()=>Router.push("/collections/outdoor")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <button onClick={() => Router.push("/collections/outdoor")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
                         </div>
-                        <div></div>
+                        <div className="relative">
+                            <img src="/animation/table.jpg" className="w-[16rem] md:w-[14rem] md:mr-[12rem]" alt="table" />
+                            <motion.img
+                                src="/animation/sofa 1.png"
+                                alt="Animated Image"
+                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] left-[4rem] md:left-[2rem] top-[17rem] md:-top-[1rem] absolute "
+                                initial={{ opacity: 100, y: 0 }}
+                                animate={controlx}
+                            />
+                            <motion.img
+                                src="/animation/sofa 2.png"
+                                alt="Animated Image"
+                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] -left-[20rem] md:left-[1rem] -top-[1rem] md:-top-[1rem] absolute"
+                                initial={{ opacity: 100, x: 0 }}
+                                animate={controlxminus}
+                            />
+
+                        </div>
                     </div>
                 </div>
                 <div id="office" className=''>
@@ -96,7 +113,7 @@ const Collections = () => {
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h1>
                             <p>A contemporary collection of internationally trending office furniture that is both comfortable and stylish.
                                 Ergonomic and luxurious office furniture designs that boost productivity and have the personality of their own</p>
-                            <button onClick={()=>Router.push("/collections/office")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <button onClick={() => Router.push("/collections/office")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
                         </div>
                         <div className="relative">
                             <img src="/animation/office-table.png" className="w-[16rem] md:w-[24rem] md:ml-[10rem]" alt="table" />
