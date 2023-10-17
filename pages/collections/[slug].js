@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useState } from 'react'
-import Router from 'next/router'
+import React, { useEffect, useState } from 'react';
+import Router from 'next/router';
 import Banner from '../../components/Banner';
-import Image from 'next/image';
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path';
 
 const Variants = {
@@ -22,97 +20,89 @@ const Variants = {
     }
 }
 
-
-const Home = ({allimages}) => {
-    const [path, setpath] = useState("");
-     const [images, setimages] = useState(allimages);
-    const [active, setactive] = useState('all');
+const Home = ({ allimages }) => {
+    const [path, setPath] = useState("");
+    const [images, setImages] = useState(allimages);
+    const [active, setActive] = useState('all');
+    const [imageLoadStatus, setImageLoadStatus] = useState({});
+    const [loadingImages, setLoadingImages] = useState(true);
 
     useEffect(() => {
-        setpath(Router.query.slug);
-
+        setPath(Router.query.slug);
     }, []);
 
-    // useEffect(() => {
+    useEffect(() => {
+        const loadStatus = {};
+        images.forEach((image, index) => {
+            const img = new Image();
+            img.src = image.split('\\').join('/').slice(6);
+            img.onload = () => {
+                loadStatus[index] = true;
+                setImageLoadStatus({ ...loadStatus });
+            };
+        });
+    }, [images]);
 
-    //     fetch("../api/getfiles", {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ path: active == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${active}` }),
-    //     }).then((response) => {
-    //         if (!response.ok) {
-    //             throw new Error('Network response was not ok');
-    //         }
-    //         return response.json();
-    //     })
-    //         .then((data) => {
-    //             setimages(data)
-    //             console.log(data)
-    //         })
-    //         .catch((error) => console.error(error));
-    // }, [path]);
+    const fetchImages = (folder) => {
+        if (folder === 'all') {
+            setImages(allimages);
+        } else {
+            setImages(allimages.filter((image) => image.includes(folder)));
+        }
+        setLoadingImages(true);
+    };
 
-    // const fetchImages = (folder) => {
-    //     fetch("../api/getfiles", {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify({ path: folder == "all" ? `\public/collections/${path}` : `\public/collections/${path}/${folder}` }),
-    //     }).then((response) => {
-    //         if (!response.ok) {
-    //             throw new Error('Network response was not ok');
-    //         }
-    //         return response.json();
-    //     })
-    //         .then((data) => {
-    //             setimages(data)
-    //             console.log(data)
-    //         })
-    //         .catch((error) => console.error(error));
-    // }
-    const fetchImages = (folder)=>{
-        folder == 'all'?setimages(allimages):setimages( allimages.filter((image)=>{ return image.includes(folder)}))
-    }
+    useEffect(() => {
+        if (Object.keys(imageLoadStatus).length === images.length) {
+            setLoadingImages(false);
+        }
+    }, [imageLoadStatus, images]);
+
     return (
         <>
-            {
-                path != undefined && <div>
+            {path !== undefined && (
+                <div>
                     <Banner text={`Collections - ${path}`} />
                     <div className='flex flex-col text-center gap-[1.5rem] py-8 md:py-[5rem] text-gray-darker regular w-[22rem] md:w-[70rem] mx-auto'>
                         <h2 className='medium text-xl'>{Variants[path] ? Variants[path]['caption'] : ''}</h2>
                         <div className='flex max-sm:overflow-x-scroll mx-auto gap-[1rem] uppercase'>
-                            {
-                                Variants[path] ? Variants[path]['category'].map((name) => (
-                                    <div onClick={() => { setactive(name); fetchImages(name) }} key={name} className={`${active == name ? "border bg-brown-light" : ""} p-[1rem] cursor-pointer transition-all duration-300`}>{name}</div>
-                                )) : null
-                            }
-                        </div>
-                        <div className='flex flex-wrap '>
-                            {
-                                images?.map((image) => {
-                                    return <div key={image.split("\\").join("/").slice(6,)} className='relative m-[0.6rem] w-[22rem] h-[24rem]'>
-                                        <Image fill loading='lazy'  src={image.split("\\").join("/").slice(6,)} alt={image.split("\\").join("/").slice(6,)} />
+                            {Variants[path]
+                                ? Variants[path]['category'].map((name) => (
+                                    <div onClick={() => { setActive(name); fetchImages(name) }} key={name} className={`${active === name ? "border bg-brown-light" : ""} p-[1rem] cursor-pointer transition-all duration-300`}>
+                                        {name}
                                     </div>
-                                })
-                            }
-
+                                ))
+                                : null}
+                        </div>
+                        <div className='flex flex-wrap'>
+                            {images?.map((image, index) => (
+                                <div key={index} className='relative m-[0.6rem] w-[22rem] h-[24rem]'>
+                                    {loadingImages || !imageLoadStatus[index] ? (
+                                        <div className='skeleton-image'></div>
+                                    ) : (
+                                        <img
+                                            loading='lazy'
+                                            src={image.split('\\').join('/').slice(6)}
+                                            alt={image.split('\\').join('/').slice(6)}
+                                        />
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
-
                 </div>
-            }
+            )}
         </>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
+
+// ... Rest of the code
+
 
 // Function to recursively read files from subfolders
 function readFilesFromSubfolders(folderPath, fileNames = []) {
-    console.log(folderPath)
     const files = fs.readdirSync(path.resolve(folderPath));
     for (const file of files) {
         const filePath = path.join(folderPath, file);
@@ -124,7 +114,6 @@ function readFilesFromSubfolders(folderPath, fileNames = []) {
     }
     return fileNames;
 }
-
 
 export async function getStaticPaths() {
     // Fetch a list of possible values for [slug]
@@ -145,17 +134,11 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     // Replace 'your-folder-path' with the actual folder path you want to read
     const folderPath = context.params.slug;
-    const fileNames = readFilesFromSubfolders(`\public/collections/${folderPath}`);
+    const fileNames = readFilesFromSubfolders(`public/collections/${folderPath}`); // Removed extra backslash
 
     return {
         props: {
-            allimages:fileNames,
+            allimages: fileNames,
         },
     };
 }
-
-
-
-
-
-
