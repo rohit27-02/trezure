@@ -207,16 +207,16 @@ const Story = () => {
             <p className='medium  text-gray-darker'>At Trezure Casa, our commitment to excellence in quality and design is the cornerstone of our multinational brand. We take great pride in curating the finest furniture from renowned global brands:
             </p>
             <p><strong>
-              Ergonomics:</strong> The furniture by our brands isn't just about aesthetics; it's designed with your well-being in mind. Every piece is thoughtfully crafted to enhance your comfort, elevating your lifestyle and making  it more enjoyable.
+              Ergonomics:</strong> The furniture by our brands isn&apos;t just about aesthetics; it&apos;s designed with your well-being in mind. Every piece is thoughtfully crafted to enhance your comfort, elevating your lifestyle and making  it more enjoyable.
             </p>
             <p><strong>
               Design Expertise:</strong> Fluent in the language of design, our international designers draws inspiration from global trends & curate exquisite pieces that not only catch the eye but also warm the heart, delivering true luxury and exclusivity.
             </p>
             <p><strong>
-              Attention to Detail:</strong> In the world of luxury furniture, it's the minutiae that truly matter. We meticulously select pieces with an emphasis on perfection. From hand-finished accents to precise stitching, our dedication to quality shines through.
+              Attention to Detail:</strong> In the world of luxury furniture, it&apos;s the minutiae that truly matter. We meticulously select pieces with an emphasis on perfection. From hand-finished accents to precise stitching, our dedication to quality shines through.
             </p>
             <p><strong>
-              Comfort-Centric Approach:</strong> Your comfort is our top priority. The furniture by our brands is more than just looks; it's about crafting spaces where you can relax, unwind, and savor life. We seamlessly blend luxury and comfort, providing you with a sanctuary of ease.
+              Comfort-Centric Approach:</strong> Your comfort is our top priority. The furniture by our brands is more than just looks; it&apos;s about crafting spaces where you can relax, unwind, and savor life. We seamlessly blend luxury and comfort, providing you with a sanctuary of ease.
               Furthermore, we meticulously source the finest products from renowned global brands to ensure that our clients experience nothing short of excellence. We work closely with skilled artisans and manufacturers to bring you the best in furniture, preserving the artistry and craftsmanship that defines our brand. We harmonise traditional craftsmanship with cutting-edge machinery to achieve precision and consistency, creating pieces that are marvels of both art and engineering.
             </p>
             <p>
