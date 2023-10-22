@@ -84,19 +84,14 @@ const Story = () => {
 
       {/* about us */}
       <div className='flex py-8 md:py-[6rem]'>
-        <img className='max-sm:hidden w-1/3' src='/about.jpg' alt='banner logo' />
-        <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[1rem]'>
+        <img className='max-sm:hidden w-[30%]' src='/about.jpg' alt='banner logo' />
+        <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
           <Fade cascade direction='up' triggerOnce>
             <h1 className='md:text-4xl text-xl bold text-gray-darker'>ABOUT US</h1>
-            <p className='medium  text-gray-darker'>We are India&apos;s finest global furniture outlet spread across 65,000sq.ft., catering to residential, commercial & outdoor luxury furniture segments.</p>
+            <p className='medium  text-gray-darker'>Welcome to Trezure Casa, your ultimate destination for luxury furniture and decor. We&apos;re a multi-brand luxury store, proudly located in the heart of Bhiwandi, offering modern and contemporary furnishings that redefine elegance. With a sprawling 65,000 square feet showroom, we bring the world&apos;s finest furniture brands, including Campo DI Fiori ,  Magister UT , Carbine, Higold, Artie, Debrah, and Modaform, right to your doorstep.
+            </p>
             <p>
-              Trezure exemplifies elegance through its tastefully curated merchandise, eclectic designs, and graceful colour tint; we showcase and provide a globally-sourced selection of home, outdoor & office furniture, besides a selective collection of delicate fabrics, artifacts.</p>
-            <p>
-              We have strategically set up a division dedicated to supporting client-specific requirements for the hospitality industry, villas, and high-end residential projects. We also source furniture fixtures and equipment customized for upscale projects from some of the best brands across the globe, where our technical Team cherry-picks each product after understanding its ergonomics and putting utmost attention to the intricacies of design. We offer you an end-to-end solution— managing goods procurements, shipping, and delivery, followed by on-site installation and after-sales support.</p>
-            <p>
-              We house an unparalleled collection of internationally sourced contemporary and yet graceful designer furniture that is sure to complement any space they are positioned in.</p>
-            <p className='medium text-gray-darker'>We invite you to come and be part of a global lifestyle phenomenon by embellishing your space in a way that reflects your distinct taste and is aesthetically stunning— Because &quot;LUXURY IS UNIVERSAL.&quot;</p>
-
+              At Trezure Casa, we are all about sophistication and style. Our curated collection boasts distinctive designs, a rich palette of colors, and tastefully selected merchandise that reflects the very essence of luxury. From dining to living, lounge to bedroom, and even outdoor & office spaces, our store takes you on a unique journey through the world of paintings, Decorative lights , carpets, and outdoor and office furniture. Experience the epitome of contemporary luxury at Trezure Casa – where modern living meets timeless elegance.</p>
           </Fade>
         </div>
       </div>
@@ -202,6 +197,33 @@ const Story = () => {
           </div>
         </div>
 
+      </div>
+
+      {/* section  */}
+      <div className='flex py-8 items-center md:py-[6rem]'>
+        <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
+          <Fade cascade direction='up' triggerOnce>
+            <h1 className='md:text-4xl text-xl bold text-gray-darker'>QUALITY & DESIGN AT TREZURE CASA</h1>
+            <p className='medium  text-gray-darker'>At Trezure Casa, our commitment to excellence in quality and design is the cornerstone of our multinational brand. We take great pride in curating the finest furniture from renowned global brands:
+            </p>
+            <p><strong>
+              Ergonomics:</strong> The furniture by our brands isn't just about aesthetics; it's designed with your well-being in mind. Every piece is thoughtfully crafted to enhance your comfort, elevating your lifestyle and making  it more enjoyable.
+            </p>
+            <p><strong>
+              Design Expertise:</strong> Fluent in the language of design, our international designers draws inspiration from global trends & curate exquisite pieces that not only catch the eye but also warm the heart, delivering true luxury and exclusivity.
+            </p>
+            <p><strong>
+              Attention to Detail:</strong> In the world of luxury furniture, it's the minutiae that truly matter. We meticulously select pieces with an emphasis on perfection. From hand-finished accents to precise stitching, our dedication to quality shines through.
+            </p>
+            <p><strong>
+              Comfort-Centric Approach:</strong> Your comfort is our top priority. The furniture by our brands is more than just looks; it's about crafting spaces where you can relax, unwind, and savor life. We seamlessly blend luxury and comfort, providing you with a sanctuary of ease.
+              Furthermore, we meticulously source the finest products from renowned global brands to ensure that our clients experience nothing short of excellence. We work closely with skilled artisans and manufacturers to bring you the best in furniture, preserving the artistry and craftsmanship that defines our brand. We harmonise traditional craftsmanship with cutting-edge machinery to achieve precision and consistency, creating pieces that are marvels of both art and engineering.
+            </p>
+            <p>
+              In summary, Trezure Casa is your gateway to an unparalleled world of quality and design, where we serve as a distributor for international influences, combining a commitment to craftsmanship and comfort to redefine your living spaces.</p>
+          </Fade>
+        </div>
+        <img className='max-sm:hidden w-[30%] h-fit' src='/about2.jpg' alt='banner logo' />
       </div>
 
       {/* our team  */}
