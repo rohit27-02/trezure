@@ -6,11 +6,16 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Showcase = () => {
   const carouselItems = [
-    "/products/6-Drawer-Dresser.jpg",
-    "products/Black-2-Drawer-Nightstand.jpg",
-    "products/Desk-with-Outlet.jpg",
-    "products/Edge-Coupe-Glass.jpg",
-    "products/Grey-Outdoor-Lounge-Chair.jpg",
+    "/products/1.jpg",
+    "products/2.jpg",
+    "products/3.jpg",
+    "products/4.jpg",
+    "products/5.jpg",
+    "products/6.jpg",
+    "products/7.jpg",
+    "products/8.jpg",
+    "products/9.jpg",
+    "products/10.jpg",
   ];
 
   const [slidesToShow, setSlidesToShow] = useState(4); // Default number of items to show
@@ -42,7 +47,7 @@ const Showcase = () => {
   const settings = {
     infinite: true,
     autoplay: true,
-    speed: 2000,
+    speed: 1000,
     autoplaySpeed: 3000,
     slidesToShow: slidesToShow, // Number of items to show based on screen width
     slidesToScroll: 1,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiLogoFacebook, BiLogoInstagram, BiLogoPinterestAlt, BiLogoLinkedin } from 'react-icons/bi'
+import { BiLogoFacebook, BiLogoInstagram, BiLogoPinterestAlt, BiLogoLinkedin, BiLogoYoutube } from 'react-icons/bi'
 
 const Social = () => {
     return (
@@ -9,6 +9,7 @@ const Social = () => {
                 <a target='_blank' href='https://instagram.com/trezurecasa_?igshid=OGQ5ZDc2ODk2ZA==' className='cursor-pointer hover:bg-white hover:text-gray-darker transition-all duration-300'><BiLogoInstagram /></a>
                 <a target='_blank' href='https://pin.it/1ZlahtC' className='cursor-pointer hover:bg-white hover:text-gray-darker transition-all duration-300'><BiLogoPinterestAlt /></a>
                 <a target='_blank' href='https://www.linkedin.com/company/trezure-casa/' className='cursor-pointer hover:bg-white hover:text-gray-darker transition-all duration-300'><BiLogoLinkedin /></a>
+                <a target='_blank' href='https://www.youtube.com/@TrezureCasa' className='cursor-pointer hover:bg-white hover:text-gray-darker transition-all duration-300'><BiLogoYoutube/></a>
             </div>
         </div>
     )

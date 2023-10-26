@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { GrPrevious, GrNext } from 'react-icons/gr';
 import { Fade } from 'react-awesome-reveal';
+import { HiOutlineArrowDownRight } from 'react-icons/hi2'
 
 const members = [
   { img: "/members/1.avif", name: "Peter", des: "DESIGNER" },
@@ -14,11 +15,33 @@ const members = [
   { img: "/members/1.avif", name: "Peter", des: "DESIGNER" },
 ]
 
+const quotes = [
+  "We envision to be the best & most trusted furniture brand in India, catering to the designer and luxury furniture segment by delivering the premium quality offerings at a modest price.",
+  "We endeavour to gain a visibility and reach in the Indian luxury furniture segment by setting up franchisee stores, applying shop in shop models, and establishing the best distribution network across the country.",
+  "To provide the best designer and luxury furniture considering value for money, which is defined to deliver the best quality to retailers & end consumers across India, ensuring effective services.",
+ 
+]
+
+const values = [
+  "Accomplishments in your life may move back and forth, but righteousness is what stays with you until the end of time. Integrity is always doing the right thing, even when no one is watching. Likewise, our sincerity towards our services and professionalism is neither over-promising nor under-delivered. We grasp every client's requirements and strive hard to deliver relevant solutions in a simplistic, ethical, and invested manner.",
+  "Our experienced team of in-house experts is empowered and committed to moving diligently towards the end objective of delivering excellence through product and best in class services through support— in sync with the requirements of our clients.",
+  "Our Team is absolutely transparent in dealing and stand by their words— you can safely put your trust in us.",
+  "Our primary focus is meeting our client requirements through our products and services, thus forging a lifelong bond. We endeavour to deliver the highest possible level of luxurious goods in continuity without fail while meeting and exceeding our client expectations.",
+  "We endeavour to work closely with every client to gauge the essence of their specific requirements. We would then bring forward clear and realistic suggestions to obtain the desired outcome through an in-depth screening and selection process, rather than relying solely on our profits.",
+  "We focus on mutually beneficial opportunities that foster long-term, sustainable relationships for growth.",
+  "We pride ourselves on having the most talented team of professionals from the industry who align with our core values to foster their growth.",
+  "Unbridled competence is quintessential to excel in every sphere of life— Being proficient means leveraging assistance, uprightness, accountability, and brilliance at work. Our end-to-end solution support strategy is an epitome of professionalism— it specially curated while keeping all high points in mind with a core objective of meeting the client requirements, thus portraying an image of proficiency.",
+  "We approach every situation, opportunity, and challenge with creativity and problem-solving aptitude, thus striving to deliver a perfect solution. We endeavour to create value through innovation, which enables us to achieve spectacular results, one after another.",
+
+]
+
 const Story = () => {
   const [scrollY, setScrollY] = useState(0);
   const controly = useAnimation();
   const controlx = useAnimation();
   const controlyminus = useAnimation();
+  const [active, setactive] = useState(1);
+  const [activesub, setactivesub] = useState(1);
 
   const [isMobile, setIsMobile] = useState(false);
   const [percentage, setpercentage] = useState(33.3);
@@ -101,16 +124,16 @@ const Story = () => {
         <div className='w-[20rem] md:w-[70rem] mx-auto flex max-sm:flex-col justify-between md:items-center'>
           <div className='relative'>
             <motion.img
-              src="/about/about-bg-4.jpg"
+              src="/products/2.jpg"
               alt="Animated Image"
-              className="transition-all duration-300 ease-linear z-10 max-sm:w-[8rem] w-[16rem] top-[20rem] md:top-[24rem] left-[12rem] md:left-[16rem] absolute "
+              className="transition-all duration-300 ease-linear z-10 max-sm:w-[8rem] w-[16rem] top-[12rem] md:top-[12rem] left-[12rem] md:left-[16rem] absolute "
               initial={{ opacity: 100, y: 0 }}
               animate={controly}
             />
             <motion.img
               src="/about/about-bg-3.jpg"
               alt="Animated Image"
-              className="transition-all duration-300 ease-linear max-sm:w-[16rem] w-[28rem] -mt-[3rem] md:-mt-[10rem]"
+              className="transition-all duration-300 ease-linear max-sm:w-[16rem] w-[28rem] -mt-0 md:-mt-[18rem]"
               initial={{ opacity: 100, y: 0 }}
               animate={controlyminus}
             />
@@ -224,6 +247,35 @@ const Story = () => {
           </Fade>
         </div>
         <img className='max-sm:hidden w-[30%] h-fit' src='/about2.jpg' alt='banner logo' />
+      </div>
+
+      {/* who we are  */}
+
+      <div className='flex w-screen items-center justify-end'>
+        <div className='w-[20rem] mx-4 md:mx-[6rem] space-y-[2rem]'>
+          <h1 className='text-3xl max-sm:text-xl text-gray-darker'>Who We Are</h1>
+          <div className='space-y-[1rem]'>
+            <div onClick={() => setactive(1)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 1 ? "md:text-3xl  text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Vision</h1><HiOutlineArrowDownRight className={active == 1 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(2)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 2 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Mission</h1><HiOutlineArrowDownRight className={active == 2 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Purpose</h1><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h1>Values</h1><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
+              {active == 4 && <div className='absolute top-14 md:top-16 md:flex-wrap text-gray-dark items-center flex gap-4 [&>*]:min-w-fit max-sm:overflow-x-scroll w-[10rem] md:w-[20rem] text-sm'>
+                <div onClick={()=>setactivesub(1)} className={`hover:text-gray-darker ${activesub==1?"text-gray-darker text-lg":""}`}>Integrity</div>
+                <div onClick={()=>setactivesub(2)} className={`hover:text-gray-darker ${activesub==2?"text-gray-darker text-lg":""}`}>Passion</div>
+                <div onClick={()=>setactivesub(3)} className={`hover:text-gray-darker ${activesub==3?"text-gray-darker text-lg":""}`}>Honesty</div>
+                <div onClick={()=>setactivesub(4)} className={`hover:text-gray-darker ${activesub==4?"text-gray-darker text-lg":""}`}>Customer Care</div>
+                <div onClick={()=>setactivesub(5)} className={`hover:text-gray-darker ${activesub==5?"text-gray-darker text-lg":""}`}>Ethics</div>
+                <div onClick={()=>setactivesub(6)} className={`hover:text-gray-darker ${activesub==6?"text-gray-darker text-lg":""}`}>Partner Care</div>
+                <div onClick={()=>setactivesub(7)} className={`hover:text-gray-darker ${activesub==7?"text-gray-darker text-lg":""}`}>Employee Care</div>
+                <div onClick={()=>setactivesub(8)} className={`hover:text-gray-darker ${activesub==8?"text-gray-darker text-lg":""}`}>Professionalism</div>
+                <div onClick={()=>setactivesub(9)} className={`hover:text-gray-darker ${activesub==9?"text-gray-darker text-lg":""}`}>Innovation</div>
+              </div>}
+            </div>
+          </div>
+        </div>
+        <div className='bg-gray-darker md:p-[4rem] overflow-auto text-gray-100 w-[24rem] md:w-[50rem] p-6 h-[20rem] md:h-[28rem]'>
+          <p className='tracking-wider lighter text-sm md:text-lg'>{active==4?values[activesub-1]:quotes[active - 1]}</p>
+        </div>
       </div>
 
       {/* our team  */}

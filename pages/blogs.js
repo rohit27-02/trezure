@@ -34,7 +34,7 @@ const Blog = () => {
                 {/* banner  */}
                 <div className='bg-[url("/blog.jpg")] bg-no-repeat bg-cover flex justify-center items-center gap-[2rem] flex-col w-full h-[42rem]'>
                     <Fade direction='up' cascade triggerOnce delay={1000}>
-                        <h1 className='text-2xl md:text-5xl bold'>Trezure Blog</h1>
+                        <h1 className='text-2xl md:text-5xl bold'>Trezure Blogs</h1>
                         <p className='text-gray-light text-center w-[20rem] md:w-[40rem]'>Trezure is a pioneer of the finest and contemporary assortment of internationally sourced designer furniture and artifacts from the best in class global brands.</p>
 
                         {/* search bar  */}

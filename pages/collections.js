@@ -107,7 +107,10 @@ const Collections = () => {
                         </div>
                     </div>
                 </div>
-                <div id="office" className=''>
+
+                {/* office  */}
+                
+                {/* <div id="office" className=''>
                     <div className='flex max-sm:flex-col-reverse items-center max-sm:py-10 h-[80vh] max-sm:gap-[8rem] md:h-screen max-sm:w-[24rem] w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
                             <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h1>
@@ -134,7 +137,7 @@ const Collections = () => {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

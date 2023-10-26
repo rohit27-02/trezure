@@ -47,7 +47,7 @@ const Header = () => {
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
         <div className='w-[25rem] h-full max-sm:hidden flex flex-col justify-between'>
           <img onClick={() => route("/")} className='w-[15rem] cursor-pointer mx-auto py-[3rem]' src='/logo.png' alt='logo' />
-          <div className='flex flex-col justify-center text-center gap-2 items-center bg-white px-[3rem] py-[5rem] '>
+          <div className='flex flex-col justify-center text-center gap-2 items-center bg-[#f3f4f6] px-[3rem] py-[5rem] '>
             <p>Building No. C-2, Gala No. 1 to 6, Bridge, Chamunda Complex, Taluka, near Kasheli, Kalher, Bhiwandi, Thane, Maharashtra 421302</p>
             <p>8097019222</p>
             <a href='mailto:contact@trezurecasa.com' className='hover:text-brown-light'>contact@trezurecasa.com</a>
@@ -63,7 +63,8 @@ const Header = () => {
               <div onClick={() => route("/collections")} className='hover:text-brown-light transition-all duration-300 ease-out'>COLLECTIONS</div>
               <div onClick={() => route("/projects")} className='hover:text-brown-light transition-all duration-300 ease-out'>PROJECTS</div>
               <div onClick={() => route("/blogs")} className='hover:text-brown-light transition-all duration-300 ease-out'>BLOGS</div>
-              <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT</div>
+              <div onClick={() => route("/contact-us")} className='hover:text-brown-light transition-all duration-300 ease-out'>CONTACT US</div>
+              <div onClick={() => route("/media-&-events")} className='hover:text-brown-light transition-all duration-300 ease-out'>MEDIA & EVENTS</div>
             </Fade>
           </div>
             <div className='flex text-xs  gap-[2.5rem]  md:mt-[4rem] text-gray-dark'>

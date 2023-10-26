@@ -13,13 +13,13 @@ const Products = () => {
                 {/* section 1  */}
                 <Fade direction='up' triggerOnce duration={3000}>
                     <div className='flex'>
-                        <img className='max-sm:w-1/2 w-1/4' src="/products/lamp.jpg" alt='product' />
+                        <img className='max-sm:w-1/2 w-1/4' src="/products/2.jpg" alt='product' />
                         <div className='flex bg-[#fcfbfa]  max-sm:w-1/2 w-1/4 flex-col gap-[1rem] justify-center px-[2rem]'>
                             <h1 className='bold md:text-xl'>TABLE LAMPS</h1>
                             <div className='w-[4rem] border-t-2 border-gray-darker'></div>
                             <p className='text-gray-light max-sm:text-xs text-sm tracking-wide'>Etiam dignissim diam quis enim. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Tempus iaculis urna id volutpat.</p>
                         </div>
-                        <img className='w-1/4 max-sm:hidden' src="/products/cupboard.jpg" alt='product' />
+                        <img className='w-1/4 max-sm:hidden' src="/products/3.jpg" alt='product' />
                         <div className='flex bg-[#fcfbfa]  w-1/4 max-sm:hidden flex-col gap-[1rem] justify-center px-[2rem]'>
                             <h1 className='bold text-xl'>SIDEBOARDS</h1>
                             <div className='w-[4rem] border-t-2 border-gray-darker'></div>
@@ -35,13 +35,13 @@ const Products = () => {
                             <div className='w-[4rem] border-t-2 border-gray-darker'></div>
                             <p className='text-gray-light text-sm tracking-wide'>Etiam dignissim diam quis enim. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Tempus iaculis urna id volutpat.</p>
                         </div>
-                        <img className='w-1/4 max-sm:hidden' src="/products/sofa.jpg" alt='product' />
+                        <img className='w-1/4 max-sm:hidden' src="/products/8.jpg" alt='product' />
                         <div className='flex bg-[#fcfbfa]  w-1/4 max-sm:w-1/2 flex-col gap-[1rem] justify-center px-[2rem]'>
                             <h1 className='bold md:text-xl'>NIGHTSTANDS</h1>
                             <div className='w-[4rem] border-t-2 border-gray-darker'></div>
                             <p className='text-gray-light max-sm:text-xs text-sm tracking-wide'>Etiam dignissim diam quis enim. Proin sagittis nisl rhoncus mattis rhoncus urna neque. Tempus iaculis urna id volutpat.</p>
                         </div>
-                        <img className='w-1/4 max-sm:w-1/2' src="/products/table.jpg" alt='product' />
+                        <img className='w-1/4 max-sm:w-1/2' src="/products/10.jpg" alt='product' />
                     </div>
 
                 </Fade>
