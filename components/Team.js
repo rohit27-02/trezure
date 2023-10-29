@@ -14,7 +14,7 @@ const Members = [
 
 const Team = () => {
     return (
-        <div className='mx-auto flex max-sm:flex-col gap-[2rem] items-center max-sm:h-[55rem] h-[40rem] text-gray-darker w-fit regular'>
+        <div className='mx-auto flex max-sm:flex-col gap-[2rem] items-center py-[5rem] text-gray-darker w-fit regular'>
             <div className='regular max-sm:w-[20rem] w-[30rem] '>
                 <Fade cascade direction='up' triggerOnce>
                     <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>OUR TEAM</h2>
@@ -23,7 +23,9 @@ const Team = () => {
                     <Button text={"VIEW MORE"} path={"/story#team"} />
                 </Fade>
             </div>
-            <div className='flex md:gap-[2rem] gap-2 max-sm:w-[22rem] w-[35rem] flex-wrap'>
+            <img className='w-[35rem]' src='/group-photo.jpg' alt='group photo'/>
+            {/* memebers  */}
+            {/* <div className='flex md:gap-[2rem] gap-2 max-sm:w-[22rem] w-[35rem] flex-wrap'>
                 {Members.map((member) => {
                     return <div key={member.name} className='w-[10rem] h-[12rem] relative group overflow-hidden'>
                         <img className='object-cover h-full group-hover:sepia-[50%] transition-all duration-300' src={member.img} alt={member.name} />
@@ -33,7 +35,7 @@ const Team = () => {
                         </div>
                     </div>
                 })}
-            </div>
+            </div> */}
         </div>
     )
 }

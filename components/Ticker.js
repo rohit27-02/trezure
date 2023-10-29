@@ -3,12 +3,13 @@ import React from 'react';
 import Marquee from "react-fast-marquee";
 
 const companyIcons = [
-    "/clients/city.jpg",
-    "/clients/debrah.jpg",
-    "/clients/higold.jpg",
-    "/clients/kelvin.jpg",
-    "/clients/m&d.jpg",
-    "/clients/violino.jpg",
+    "/clients/Artie.png",
+    "/clients/Campo.png",
+    "/clients/Carbine.png",
+    "/clients/Debrahs.png",
+    "/clients/Higold.png",
+    "/clients/Modaform.png",
+    "/clients/MUT.png",
 
 ]
 

@@ -38,7 +38,7 @@ const Header = () => {
 
       {/* navbar */}
       <div className='flex  items-center justify-between'>
-        <img onClick={() => Router.push("/")} className={`md:w-[10rem] w-[7rem] cursor-pointer transition-all duration-300 ${isScrolled ? "invert-0" : "invert"}`} src='/logo.png' alt='logo' />
+        <img onClick={() => Router.push("/")} className={`md:w-[8rem] py-[1rem] w-[7rem] cursor-pointer transition-all duration-300 ${isScrolled ? "invert-0" : "invert"}`} src='/logo.png' alt='logo' />
         <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 md:text-lg text-sm medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
 
@@ -46,10 +46,12 @@ const Header = () => {
       <div className={`w-screen flex absolute text-gray-darker z-50 bg-[#f6f6f6] top-0 left-0  transition-all duration-500 ease-out h-screen ${selected ? "translate-y-0 " : "-translate-y-full"}`}>
         <RxCross2 onClick={() => setselected(false)} className='text-3xl cursor-pointer right-[3rem] top-[2rem] absolute ' />
         <div className='w-[25rem] h-full max-sm:hidden flex flex-col justify-between'>
-          <img onClick={() => route("/")} className='w-[15rem] cursor-pointer mx-auto py-[3rem]' src='/logo.png' alt='logo' />
+          <img onClick={() => route("/")} className='w-[12rem] cursor-pointer mx-auto py-[3rem]' src='/logo.png' alt='logo' />
           <div className='flex flex-col justify-center text-center gap-2 items-center bg-[#f3f4f6] px-[3rem] py-[5rem] '>
-            <p>Building No. C-2, Gala No. 1 to 6, Bridge, Chamunda Complex, Taluka, near Kasheli, Kalher, Bhiwandi, Thane, Maharashtra 421302</p>
-            <p>8097019222</p>
+            <p>Building No. C-2, Gala No. 1 to 6, Near Kasheli Bridge, Chamunda Complex, Kasheli, Bhiwandi Taluka, Thane(W), Maharashtra 421302
+            </p>
+            <p>8097019222
+            </p>
             <a href='mailto:contact@trezurecasa.com' className='hover:text-brown-light'>contact@trezurecasa.com</a>
             <p className='text-[10px] text-gray-dark mt-[1rem] tracking-widest'>COPYRIGHT 2023 © TREZURE. ALL RIGHTS RESERVED.</p>
           </div>
@@ -67,11 +69,11 @@ const Header = () => {
               <div onClick={() => route("/media-&-events")} className='hover:text-brown-light transition-all duration-300 ease-out'>MEDIA & EVENTS</div>
             </Fade>
           </div>
-            <div className='flex text-xs  gap-[2.5rem]  md:mt-[4rem] text-gray-dark'>
-              <button className='hover:text-gray-darker transition-all duration-300'>Terms & Conditions</button>
-              <button className='hover:text-gray-darker transition-all duration-300'>Privacy Policy</button>
-              <button className='hover:text-gray-darker transition-all duration-300'>Help Center</button>
-            </div>
+          <div className='flex text-xs  gap-[2.5rem]  md:mt-[4rem] text-gray-dark'>
+            <button className='hover:text-gray-darker transition-all duration-300'>Terms & Conditions</button>
+            <button className='hover:text-gray-darker transition-all duration-300'>Privacy Policy</button>
+            <button className='hover:text-gray-darker transition-all duration-300'>Help Center</button>
+          </div>
         </div>
       </div>
 

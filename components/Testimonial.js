@@ -55,6 +55,8 @@ const Testimonial = () => {
         showThumbs={false}
         className='relative '
         showArrows={false}
+        autoPlay={true}
+        stopOnHover={true}
       // renderArrowPrev={(onClickHandler, hasPrev) =>
       //   hasPrev && (
       //     <div onClick={onClickHandler} className='flex items-center hover:bottom-0 hover:invert transition-all duration-300 absolute top-[6rem] z-20 bg-white  cursor-pointer  border-gray-darker border max-sm:h-10 max-sm:w-10  h-[3rem] w-[3rem] justify-center rounded-full md:text-xl'>
@@ -72,7 +74,7 @@ const Testimonial = () => {
       >
         {Items.map((item, i) => {
           return (
-            <div key={i} className=' w-[45rem] max-sm:w-full text-start drop-shadow-sm bg-[#fcfbfa] h-auto  p-[2.5rem]'>
+            <div key={i} className=' w-[45rem] max-sm:w-full text-start drop-shadow-sm bg-[#fcfbfa] h-auto max-sm:h-[25rem] overflow-y-auto  p-[2.5rem]'>
               <div className='flex mb-[2rem] justify-start gap-[2rem] items-center'>
                 <div className='w-[4rem] bg-gray-dark h-[4rem] max-sm:w-[8rem] max-sm:h-[4.5rem] overflow-hidden rounded-full'>
                   <img className='h-[4rem] w-[4rem]  object-cover' src={item.img} alt={item.name} />

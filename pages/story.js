@@ -19,7 +19,7 @@ const quotes = [
   "We envision to be the best & most trusted furniture brand in India, catering to the designer and luxury furniture segment by delivering the premium quality offerings at a modest price.",
   "We endeavour to gain a visibility and reach in the Indian luxury furniture segment by setting up franchisee stores, applying shop in shop models, and establishing the best distribution network across the country.",
   "To provide the best designer and luxury furniture considering value for money, which is defined to deliver the best quality to retailers & end consumers across India, ensuring effective services.",
- 
+
 ]
 
 const values = [
@@ -111,10 +111,17 @@ const Story = () => {
         <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
           <Fade cascade direction='up' triggerOnce>
             <h1 className='md:text-4xl text-xl bold text-gray-darker'>ABOUT US</h1>
-            <p className='medium  text-gray-darker'>Welcome to Trezure Casa, your ultimate destination for luxury furniture and decor. We&apos;re a multi-brand luxury store, proudly located in the heart of Bhiwandi, offering modern and contemporary furnishings that redefine elegance. With a sprawling 65,000 square feet showroom, we bring the world&apos;s finest furniture brands, including Campo DI Fiori ,  Magister UT , Carbine, Higold, Artie, Debrah, and Modaform, right to your doorstep.
+            <p className='medium  text-gray-darker'>Welcome to Trezure Casa, your ultimate destination for luxury furniture and decor. We&apos;re a multi-brand luxury store,  located in Kasheli Bhiwandi, offering modern and contemporary furnishings that redefine elegance.
             </p>
             <p>
-              At Trezure Casa, we are all about sophistication and style. Our curated collection boasts distinctive designs, a rich palette of colors, and tastefully selected merchandise that reflects the very essence of luxury. From dining to living, lounge to bedroom, and even outdoor & office spaces, our store takes you on a unique journey through the world of paintings, Decorative lights , carpets, and outdoor and office furniture. Experience the epitome of contemporary luxury at Trezure Casa – where modern living meets timeless elegance.</p>
+              With a sprawling 65,000 square feet store, we bring the world&apos;s finest designer furniture brands i.e Campo De Fiori ,  Magister UT , Carbine, Higold, Artie, Debrah, and Modaform, right to your doorstep.
+            </p>
+            <p>
+              At Trezure Casa, we are all about sophistication and style. Our curated collection boasts distinctive designs, a rich palette of colours, and tastefully selected merchandise that reflects the very essence of luxury.
+            </p>
+            <p>
+              From dining to living, lounge to bedroom, and even outdoor & office spaces, our store takes you on a unique journey through the world of Paintings, Decorative lights & Carpets. Experience the epitome of contemporary luxury at Trezure Casa – where modern living meets timeless elegance.
+            </p>
           </Fade>
         </div>
       </div>
@@ -260,21 +267,21 @@ const Story = () => {
             <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Purpose</h1><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
             <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h1>Values</h1><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
               {active == 4 && <div className='absolute top-14 md:top-16 md:flex-wrap text-gray-dark items-center flex gap-4 [&>*]:min-w-fit max-sm:overflow-x-scroll w-[10rem] md:w-[20rem] text-sm'>
-                <div onClick={()=>setactivesub(1)} className={`hover:text-gray-darker ${activesub==1?"text-gray-darker text-lg":""}`}>Integrity</div>
-                <div onClick={()=>setactivesub(2)} className={`hover:text-gray-darker ${activesub==2?"text-gray-darker text-lg":""}`}>Passion</div>
-                <div onClick={()=>setactivesub(3)} className={`hover:text-gray-darker ${activesub==3?"text-gray-darker text-lg":""}`}>Honesty</div>
-                <div onClick={()=>setactivesub(4)} className={`hover:text-gray-darker ${activesub==4?"text-gray-darker text-lg":""}`}>Customer Care</div>
-                <div onClick={()=>setactivesub(5)} className={`hover:text-gray-darker ${activesub==5?"text-gray-darker text-lg":""}`}>Ethics</div>
-                <div onClick={()=>setactivesub(6)} className={`hover:text-gray-darker ${activesub==6?"text-gray-darker text-lg":""}`}>Partner Care</div>
-                <div onClick={()=>setactivesub(7)} className={`hover:text-gray-darker ${activesub==7?"text-gray-darker text-lg":""}`}>Employee Care</div>
-                <div onClick={()=>setactivesub(8)} className={`hover:text-gray-darker ${activesub==8?"text-gray-darker text-lg":""}`}>Professionalism</div>
-                <div onClick={()=>setactivesub(9)} className={`hover:text-gray-darker ${activesub==9?"text-gray-darker text-lg":""}`}>Innovation</div>
+                <div onClick={() => setactivesub(1)} className={`hover:text-gray-darker ${activesub == 1 ? "text-gray-darker text-lg" : ""}`}>Integrity</div>
+                <div onClick={() => setactivesub(2)} className={`hover:text-gray-darker ${activesub == 2 ? "text-gray-darker text-lg" : ""}`}>Passion</div>
+                <div onClick={() => setactivesub(3)} className={`hover:text-gray-darker ${activesub == 3 ? "text-gray-darker text-lg" : ""}`}>Honesty</div>
+                <div onClick={() => setactivesub(4)} className={`hover:text-gray-darker ${activesub == 4 ? "text-gray-darker text-lg" : ""}`}>Customer Care</div>
+                <div onClick={() => setactivesub(5)} className={`hover:text-gray-darker ${activesub == 5 ? "text-gray-darker text-lg" : ""}`}>Ethics</div>
+                <div onClick={() => setactivesub(6)} className={`hover:text-gray-darker ${activesub == 6 ? "text-gray-darker text-lg" : ""}`}>Partner Care</div>
+                <div onClick={() => setactivesub(7)} className={`hover:text-gray-darker ${activesub == 7 ? "text-gray-darker text-lg" : ""}`}>Employee Care</div>
+                <div onClick={() => setactivesub(8)} className={`hover:text-gray-darker ${activesub == 8 ? "text-gray-darker text-lg" : ""}`}>Professionalism</div>
+                <div onClick={() => setactivesub(9)} className={`hover:text-gray-darker ${activesub == 9 ? "text-gray-darker text-lg" : ""}`}>Innovation</div>
               </div>}
             </div>
           </div>
         </div>
         <div className='bg-gray-darker md:p-[4rem] overflow-auto text-gray-100 w-[24rem] md:w-[50rem] p-6 h-[20rem] md:h-[28rem]'>
-          <p className='tracking-wider lighter text-sm md:text-lg'>{active==4?values[activesub-1]:quotes[active - 1]}</p>
+          <p className='tracking-wider lighter text-sm md:text-lg'>{active == 4 ? values[activesub - 1] : quotes[active - 1]}</p>
         </div>
       </div>
 
@@ -285,7 +292,8 @@ const Story = () => {
           <h2 className='cool text-[54px] max-sm:text-[40px] text-brown-light w-fit mx-auto '>members</h2>
           <h1 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h1>
         </Fade>
-        <Carousel
+        <img src='group-photo.jpg' alt='group photo' className='w-[60rem] mx-auto'/>
+        {/* <Carousel
           emulateTouch={true}
           infiniteLoop={true}
           showIndicators={false}
@@ -315,7 +323,7 @@ const Story = () => {
             </div>
           })}
 
-        </Carousel>
+        </Carousel> */}
       </div>
 
       {/* newsletter  */}
