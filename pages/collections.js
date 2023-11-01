@@ -53,7 +53,7 @@ const Collections = () => {
                             <button onClick={() => Router.push("/collections/home")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
                         </div>
                         <div className="relative">
-                            <img src="/animation/sofa.png" className="max-sm:w-[14rem] max-sm:ml-[1rem] w-[24rem] ml-[10rem]" alt="sofa" />
+                            <img src="/animation/sofa.png" className="max-sm:w-[24rem] max-sm:ml-[1rem] w-[40rem] -mt-[8rem] ml-[4rem]" alt="sofa" />
                             <motion.img
                                 src="/animation/table.png"
                                 alt="Animated Image"
@@ -64,14 +64,14 @@ const Collections = () => {
                             <motion.img
                                 src="/animation/lamp.png"
                                 alt="Animated Image"
-                                className="transition-all duration-300 ease-linear max-sm:w-[6rem] w-[8rem] right-[1rem] -top-[10rem] -z-10 absolute"
+                                className="transition-all duration-300 ease-linear max-sm:w-[6rem] w-[8rem] right-[3rem] -top-[10rem] -z-10 absolute"
                                 initial={{ opacity: 100, x: 0 }}
                                 animate={controlxminus}
                             />
                             <motion.img
                                 src="/animation/plant.png"
                                 alt="Animated Image"
-                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[8rem] md:left-[10rem] -top-[6rem] absolute"
+                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[8rem] md:left-[10rem] -top-[3rem] max-sm:-top-[6rem] absolute"
                                 initial={{ opacity: 100, x: 0 }}
                                 animate={controlx}
                             />
@@ -88,18 +88,18 @@ const Collections = () => {
                             <button onClick={() => Router.push("/collections/outdoor")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
                         </div>
                         <div className="relative">
-                            <img src="/animation/table.jpg" className="w-[16rem] md:w-[14rem] md:mr-[12rem]" alt="table" />
+                            <img src="/animation/table.jpg" className="w-[10rem] max-sm:pt-[4rem] md:w-[14rem] md:mr-[12rem]" alt="table" />
                             <motion.img
                                 src="/animation/Sofa1.png"
                                 alt="Animated Image"
-                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] left-[4rem] md:left-[2rem] top-[17rem] md:-top-[1rem] absolute "
+                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] left-[4rem] md:left-[2rem] top-[5rem] md:-top-[1rem] absolute "
                                 initial={{ opacity: 100, y: 0 }}
                                 animate={controlx}
                             />
                             <motion.img
                                 src="/animation/Sofa2.png"
                                 alt="Animated Image"
-                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem] -left-[20rem] md:left-[1rem] -top-[1rem] md:-top-[1rem] absolute"
+                                className="transition-all duration-300 ease-linear w-[6rem] md:w-[11rem]  md:left-[1rem] top-[5rem] md:-top-[1rem] absolute"
                                 initial={{ opacity: 100, x: 0 }}
                                 animate={controlxminus}
                             />

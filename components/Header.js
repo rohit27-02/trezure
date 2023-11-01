@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Check if the page is scrolled
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 50 || Router.asPath=="/") {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
