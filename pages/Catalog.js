@@ -1,12 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import { Viewer, Worker } from '@react-pdf-viewer/core';
 
-const Catalog = () => {
-  return (
-    <div className='w-screen h-screen relative z-50  overflow-hidden'>
-        <img className='absolute inset-0 object-cover' src='/bg.jpg' alt=''/>
-    </div>
-  )
+import '@react-pdf-viewer/core/lib/styles/index.css';
+
+
+export default function Catalog() {
+    return (
+        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.js">
+            <div className=' w-screen relative scale-105 h-screen max-sm:scale-150 max-sm:mt-52 z-50'>
+                <Viewer
+                    className="w-screen object-cover abolute top-0  m-0 p-0"
+                    fileUrl="/Trezure_Casa_Catalogue_2023.pdf"
+
+                />
+            </div>
+        </Worker>
+    );
 }
-
-export default Catalog

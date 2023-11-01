@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import Social from './Social';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
   const [selected, setselected] = useState(false)
 
   useEffect(() => {

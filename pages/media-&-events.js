@@ -17,7 +17,7 @@ const Media = () => {
       <section className="text-gray-darker regular body-font">
 
         {/* banner  */}
-        <div className='bg-[url("/blog.jpg")] bg-no-repeat bg-cover flex justify-center items-center gap-[2rem] flex-col w-full h-[42rem]'>
+        <div className='bg-gray-100 bg-no-repeat bg-cover flex justify-center items-center gap-[2rem] flex-col w-full h-[42rem]'>
           <Fade direction='up' cascade triggerOnce delay={1000}>
             <h1 className='text-2xl md:text-5xl bold'>Media & Events</h1>
             <p className='text-gray-light text-center w-[20rem] md:w-[40rem]'>Trezure is a pioneer of the finest and contemporary assortment of internationally sourced designer furniture and artifacts from the best in class global brands.</p>
