@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Check if the page is scrolled
-      if (window.pageYOffset > 50 || Router.asPath=="/") {
+      if (window.pageYOffset > 50 ) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -31,14 +31,14 @@ const Header = () => {
     Router.push(path)
   }
   return (
-    <div className={`md:px-[5rem] px-[1rem] drop-shadow-md w-screen fixed top-0 z-50 text-gray-darker regular  justify-between transition-all duration-300 ease-out ${isScrolled ? "bg-white text-gray-darker" : "text-white"}`}>
+    <div className={`md:px-[5rem] px-[1rem] drop-shadow-md w-screen fixed top-0 z-50  regular  justify-between transition-all duration-300 ease-out bg-white text-gray-darker`}>
 
       {/* social link  */}
       <Social />
 
       {/* navbar */}
       <div className='flex  items-center justify-between'>
-        <img onClick={() => Router.push("/")} className={`md:w-[8rem] py-[1rem] w-[7rem] cursor-pointer transition-all duration-300 ${isScrolled ? "invert-0" : "invert"}`} src='/logo.png' alt='logo' />
+        <img onClick={() => Router.push("/")} className={`md:w-[8rem] py-[1rem] w-[7rem] cursor-pointer transition-all duration-300 `} src='/logo.png' alt='logo' />
         <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 md:text-lg text-sm medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
       </div>
 
