@@ -3,17 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import { GrPrevious, GrNext } from 'react-icons/gr';
 import { Fade } from 'react-awesome-reveal';
 import { HiOutlineArrowDownRight } from 'react-icons/hi2'
-
-const members = [
-  { img: "/members/1.avif", name: "Peter", des: "DESIGNER" },
-  { img: "/members/1.avif", name: "Peter", des: "CEO" },
-  { img: "/members/1.avif", name: "Peter", des: "MANAGER" },
-  { img: "/members/1.avif", name: "Peter", des: "DESIGNER" },
-]
 
 const quotes = [
   "We envision to be the best & most trusted furniture brand in India, catering to the designer and luxury furniture segment by delivering the premium quality offerings at a modest price.",

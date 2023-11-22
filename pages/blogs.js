@@ -80,7 +80,7 @@ const Blog = () => {
                 </div>
 
                 {/* blogs  */}
-                {/* <div className='w-[20rem] md:w-[65rem] -mt-[6rem] flex justify-between flex-wrap mx-auto'>
+                <div className='w-[20rem] md:w-[65rem] -mt-[6rem] flex justify-between flex-wrap mx-auto'>
                     {posts && posts.map((post) => {
                         return <div key={post.id} className=" md:w-[48%] ">
                             <Fade direction='up' triggerOnce >
@@ -103,7 +103,7 @@ const Blog = () => {
                             </Fade>
                         </div>
                     })}
-                </div> */}
+                </div>
 
             </section>
         </div>
