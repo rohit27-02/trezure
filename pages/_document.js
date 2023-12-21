@@ -1,12 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { Helmet } from 'react-helmet';
 
 class MyDocument extends Document {
     render() {
         return (
             <Html lang='en'>
                 <Head>
-                    <Helmet>
+                   
                         <script>
                             {`
                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -16,7 +15,7 @@ class MyDocument extends Document {
                 })(window,document,'script','dataLayer','GTM-T7H9NMWG');
               `}
                         </script>
-                    </Helmet>
+             
 
                 </Head>
                 <body>
