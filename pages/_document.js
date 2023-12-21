@@ -1,0 +1,35 @@
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Helmet } from 'react-helmet';
+
+class MyDocument extends Document {
+    render() {
+        return (
+            <Html lang='en'>
+                <Head>
+                    <Helmet>
+                        <script>
+                            {`
+               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-T7H9NMWG');
+              `}
+                        </script>
+                    </Helmet>
+
+                </Head>
+                <body>
+                    <noscript>
+                        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7H9NMWG"
+                            height="0" width="0" className='hidden sr-only'></iframe>
+                    </noscript>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
+}
+
+export default MyDocument;

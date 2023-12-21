@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Fade } from 'react-awesome-reveal';
 import { HiOutlineArrowDownRight } from 'react-icons/hi2'
+import Head from 'next/head';
 
 const quotes = [
   "We envision to be the best & most trusted furniture brand in India, catering to the designer and luxury furniture segment by delivering the premium quality offerings at a modest price.",
@@ -90,6 +91,12 @@ const Story = () => {
 
   return (
     <div className='regular text-gray-dark'>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trezure Casa: Mumbai&apos;s Premier Luxury Furniture Brand</title>
+        <meta name="description" content="Discover Trezure Casa, Mumbai's premier luxury furniture brand. Our 65,000 sq. ft. store in Kasheli offers top designer brands for contemporary elegance." />
+      </Head>
 
       {/* banner */}
       <div className='w-full md:h-[30rem] overflow-hidden '>
@@ -101,7 +108,7 @@ const Story = () => {
         <img className='max-sm:hidden w-[30%]' src='/about.jpg' alt='banner logo' />
         <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
           <Fade cascade direction='up' triggerOnce>
-            <h1 className='md:text-4xl text-xl bold text-gray-darker'>ABOUT US</h1>
+            <h1 className='md:text-4xl text-xl bold text-gray-darker'>Unveiling Trezure Casa: Your Luxury Furniture Brand</h1>
             <p className='medium  text-gray-darker'>Welcome to Trezure Casa, your ultimate destination for luxury furniture and decor. We&apos;re a multi-brand luxury store,  located in Kasheli Bhiwandi, offering modern and contemporary furnishings that redefine elegance.
             </p>
             <p>
@@ -283,7 +290,7 @@ const Story = () => {
           <h2 className='cool text-[54px] max-sm:text-[40px] text-brown-light w-fit mx-auto '>members</h2>
           <h1 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h1>
         </Fade>
-        <img src='group-photo.jpg' alt='group photo' className='w-[60rem] mx-auto'/>
+        <img src='group-photo.jpg' alt='group photo' className='w-[60rem] mx-auto' />
         {/* <Carousel
           emulateTouch={true}
           infiniteLoop={true}

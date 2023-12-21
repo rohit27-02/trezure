@@ -6,7 +6,7 @@ import { Fade } from 'react-awesome-reveal';
 const Slideshow = () => {
 
     return (
-        <div className=''>
+        <div className='mt-[2rem]'>
             <div className="relative w-full flex justify-center pb-[56.25%]">
                
                 <video
