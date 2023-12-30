@@ -22,7 +22,7 @@ const Popup = () => {
     return (
         <div>
             {/* popup */}
-            <div className={`w-screen h-screen fixed tracking-wider z-50 backdrop-blur-sm text-gray-darker bg-transparent justify-center items-center ${popup ? "flex" : "hidden"}`}>
+            <div className={`w-screen h-screen -mt-8 fixed tracking-wider z-50 backdrop-blur-sm text-gray-darker bg-transparent justify-center items-center ${popup ? "flex" : "hidden"}`}>
                 <div className='bg-white relative p-[5rem] flex flex-col drop-shadow-xl gap-[2rem] max-sm:w-[24rem] w-[35rem] text-center  justify-center items-center'>
                     <RxCross2 onClick={() => { sessionStorage.setItem("popup", show); setpopup(false) }} className='absolute text-brown-light transition-all duration-300 hover:text-gray-darker text-3xl cursor-pointer right-[1rem] top-[1rem]' />
                     <h1 className='text-2xl bold text-brown-light tracking-widest underline-offset-8 underline'>Newsletter</h1>
