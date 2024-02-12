@@ -25,7 +25,7 @@ const Popup = () => {
             <div className={`w-screen h-screen -mt-8 fixed tracking-wider z-50 backdrop-blur-sm text-gray-darker bg-transparent justify-center items-center ${popup ? "flex" : "hidden"}`}>
                 <div className='bg-white relative p-[5rem] flex flex-col drop-shadow-xl gap-[2rem] max-sm:w-[24rem] w-[35rem] text-center  justify-center items-center'>
                     <RxCross2 onClick={() => { sessionStorage.setItem("popup", show); setpopup(false) }} className='absolute text-brown-light transition-all duration-300 hover:text-gray-darker text-3xl cursor-pointer right-[1rem] top-[1rem]' />
-                    <h1 className='text-2xl bold text-brown-light tracking-widest underline-offset-8 underline'>Newsletter</h1>
+                    <h2 className='text-2xl bold text-brown-light tracking-widest underline-offset-8 underline'>Newsletter</h2>
                     <p className='lighter text-dark'>Enter your email address to subscribe our notification of our new post & features by email</p>
                     <div className='border-b flex text-lg'>
                         <input type='email' onChange={(e)=>setemail(e.target.value)} value={email} placeholder='Enter Your Email...' className='outline-none w-[20rem] focus:text-gray-dark bg-transparent py-[0.5rem] border-none' />

@@ -146,7 +146,7 @@ const Story = () => {
           </div>
           <div className='w-[20rem] max-sm:mt-[8rem] md:w-[25rem] flex flex-col '>
             <Fade cascade triggerOnce direction='up'>
-              <h1 className='text-4xl medium text-gray-darker'>How we do</h1>
+              <h2 className='text-4xl medium text-gray-darker'>How we do</h2>
               <p className='text-gray-light max-sm:text-sm mt-[1rem]'>Through the seamless coordination between our warehousing facility, Flagship, and Franchise Stores, we bring the world-class designer products to you— each one globally sourced after undergoing stringent quality checks.</p>
             </Fade>
 
@@ -231,7 +231,7 @@ const Story = () => {
       <div className='flex py-8 items-center md:py-[6rem]'>
         <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
           <Fade cascade direction='up' triggerOnce>
-            <h1 className='md:text-4xl text-xl bold text-gray-darker'>QUALITY & DESIGN AT TREZURE CASA</h1>
+            <h2 className='md:text-4xl text-xl bold text-gray-darker'>QUALITY & DESIGN AT TREZURE CASA</h2>
             <p className='medium  text-gray-darker'>At Trezure Casa, our commitment to excellence in quality and design is the cornerstone of our multinational brand. We take great pride in curating the finest furniture from renowned global brands:
             </p>
             <p><strong>
@@ -258,12 +258,12 @@ const Story = () => {
 
       <div className='flex w-screen items-center justify-end'>
         <div className='w-[20rem] mx-4 md:mx-[6rem] space-y-[2rem]'>
-          <h1 className='text-3xl max-sm:text-xl text-gray-darker'>Who We Are</h1>
+          <h2 className='text-3xl max-sm:text-xl text-gray-darker'>Who We Are</h2>
           <div className='space-y-[1rem]'>
-            <div onClick={() => setactive(1)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 1 ? "md:text-3xl  text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Vision</h1><HiOutlineArrowDownRight className={active == 1 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(2)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 2 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Mission</h1><HiOutlineArrowDownRight className={active == 2 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h1>Purpose</h1><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h1>Values</h1><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
+            <div onClick={() => setactive(1)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 1 ? "md:text-3xl  text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Vision</h2><HiOutlineArrowDownRight className={active == 1 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(2)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 2 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Mission</h2><HiOutlineArrowDownRight className={active == 2 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Purpose</h2><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h2>Values</h2><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
               {active == 4 && <div className='absolute top-14 md:top-16 md:flex-wrap text-gray-dark items-center flex gap-4 [&>*]:min-w-fit max-sm:overflow-x-scroll w-[10rem] md:w-[20rem] text-sm'>
                 <div onClick={() => setactivesub(1)} className={`hover:text-gray-darker ${activesub == 1 ? "text-gray-darker text-lg" : ""}`}>Integrity</div>
                 <div onClick={() => setactivesub(2)} className={`hover:text-gray-darker ${activesub == 2 ? "text-gray-darker text-lg" : ""}`}>Passion</div>
@@ -288,7 +288,7 @@ const Story = () => {
 
         <Fade direction='up' cascade triggerOnce>
           <h2 className='cool text-[54px] max-sm:text-[40px] text-brown-light w-fit mx-auto '>members</h2>
-          <h1 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h1>
+          <h2 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h2>
         </Fade>
         <img src='group-photo.jpg' alt='group photo' className='w-[60rem] mx-auto' />
         {/* <Carousel
@@ -327,7 +327,7 @@ const Story = () => {
       {/* newsletter  */}
       <div className='bg-[url("/about/newsletter-bg.jpg")] tracking-wide bg-top bg-no-repeat bg-cover w-full h-[22rem] flex items-center justify-center'>
         <div className='w-[24rem] md:w-[70rem] flex justify-center items-center flex-col'>
-          <h1 className='text-4xl max-sm:text-xl pb-[0.2rem] max-sm:pb-[1.5rem] text-white'>NEWLETTER</h1>
+          <h2 className='text-4xl max-sm:text-xl pb-[0.2rem] max-sm:pb-[1.5rem] text-white'>NEWLETTER</h2>
           <p className='text-gray-300 max-sm:text-sm'>Keep up to date with our latest news and special offers.</p>
           <div className='h-[3rem] max-sm:h-[2.5rem] w-[20rem] md:w-[40rem] my-[2rem]'>
             <input className='outline-none text-lg rounded-none max-sm:text-sm h-full w-[80%] max-sm:w-[70%] p-[1rem]' type='text' placeholder='Email address' />

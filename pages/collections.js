@@ -46,7 +46,7 @@ const Collections = () => {
                 <div id="home" className=''>
                     <div className='flex max-sm:flex-col-reverse items-center max-sm:py-10 h-[110vh] max-sm:gap-[8rem] md:h-screen max-sm:w-[24rem] w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-2/5'>
-                            <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>HOME</h1>
+                            <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>HOME</h2>
                             <p>Gorgeous range of global furniture infused with character and charm galore— seamlessly fitting into your first and second homes and equally enticing for a contemporary setting.
                                 The most extensive assortment of home furniture collection laced with contemporary designs, trending in the international circles and built to last.
                                 Stunning, superb, and stylish porch furniture collection to bring your outdoors to life.</p>
@@ -81,7 +81,7 @@ const Collections = () => {
                 <div id="outdoor" className='bg-stone-100'>
                     <div className='flex max-sm:flex-col-reverse max-sm:w-[24rem] max-sm:py-10  flex-row-reverse text-right items-center h-[80vh] max-sm:gap-[8rem] md:h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
-                            <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OUTDOOR</h1>
+                            <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OUTDOOR</h2>
                             <p>An impressive variety of patio furniture and accent pieces to impart a similar sense of sophistication and poise to your outdoor space that is found inside your home.
                                 Lose track of time in the company of your loved ones, lazing comfortably in our hand-picked global outdoor furniture range.
                                 Stunning and Ergonomic assortments sourced from the globally renowned designer furniture brands.</p>
@@ -113,7 +113,7 @@ const Collections = () => {
                 {/* <div id="office" className=''>
                     <div className='flex max-sm:flex-col-reverse items-center max-sm:py-10 h-[80vh] max-sm:gap-[8rem] md:h-screen max-sm:w-[24rem] w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
-                            <h1 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h1>
+                            <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h2>
                             <p>A contemporary collection of internationally trending office furniture that is both comfortable and stylish.
                                 Ergonomic and luxurious office furniture designs that boost productivity and have the personality of their own</p>
                             <button onClick={() => Router.push("/collections/office")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>

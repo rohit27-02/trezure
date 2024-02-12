@@ -17,7 +17,7 @@ const Projects = () => {
         <div className='md:h-[50rem] text-white w-full bg-gray-darker'>
             <div className='md:pt-[5vmax] p-[1rem] md:px-[10vmax]'>
                 <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>OUR PROJECTS</h2>
-                <h1 className='text-[40px] max-sm:text-xl tracking-wider medium'>JUST FOR YOUR HOME</h1>
+                <h2 className='text-[40px] max-sm:text-xl tracking-wider medium'>JUST FOR YOUR HOME</h2>
             </div>
             <div className=''>
                 <Carousel
@@ -39,7 +39,7 @@ const Projects = () => {
                 >
                     {Items.map((item, i) => {
                         return <div key={i} className={`md:m-[4rem] relative m-[2rem] md:h-[30rem] h-[15rem] w-[20rem] md:w-[40rem] group transition-all duration-700 overflow-hidden ease-linear  ${i == index ? " cursor-pointer shadow-[0_0px_90px_70px_rgba(51,51,51,0.8)] z-20" : "scale-75 brightness-75 opacity-80"}`}>
-                           <img className={`ease-out transition-all absolute inset-0 duration-500 w-full h-full object-cover ${i == index ? "group-hover:scale-110" : ""}`} src={item.img} />
+                           <img alt={"showcase banner "+ i} className={`ease-out transition-all absolute inset-0 duration-500 w-full h-full object-cover ${i == index ? "group-hover:scale-110" : ""}`} src={item.img} />
                         
                         </div>
                     })}

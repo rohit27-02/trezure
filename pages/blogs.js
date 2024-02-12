@@ -24,9 +24,9 @@ const Blog = () => {
     const [posts, setposts] = useState();
     const [post, setpost] = useState();
 
-    useEffect(() => {
-        client.fetch(feedQuery).then((data) => { setposts(data); setpost(data[0]) })
-    }, []);
+    // useEffect(() => {
+    //     client.fetch(feedQuery).then((data) => { setposts(data); setpost(data[0]) })
+    // }, []);
     return (
         <div>
             <section className="text-gray-darker regular body-font">
@@ -90,7 +90,7 @@ const Blog = () => {
                                     </div>
                                     <div className="flex flex-col gap-[1rem] mt-[1rem]">
                                         <h2 className="tracking-[0.2rem] max-sm:text-sm uppercase text-gray-light ">{post._createdAt.slice(0, 10)} - BY {post.author.name}</h2>
-                                        <h1 className="title-font md:text-2xl medium ">{post.title}</h1>
+                                        <h2 className="title-font md:text-2xl medium ">{post.title}</h2>
                                         <div className="flex items-center mb-[4rem] hover:text-brown-light group transition-all duration-300 ease-out tracking-widest flex-wrap ">
                                             <a onClick={() => localStorage.setItem("slug", post.slug)} href={`/post/${post.slug}/?slug=${post.slug}`} className=" inline-flex items-center md:mb-2 lg:mb-0">
                                                 <span className='border-t w-8 group-hover:border-brown-light border-gray-darker mr-4'></span>

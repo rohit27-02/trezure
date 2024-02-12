@@ -39,7 +39,7 @@ const Header = () => {
       {/* navbar */}
       <div className='flex  items-center justify-between'>
         <img onClick={() => Router.push("/")} className={`md:w-[8rem] py-[1rem] w-[7rem] cursor-pointer transition-all duration-300 `} src='/logo.png' alt='logo' />
-        <h1 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 md:text-lg text-sm medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h1>
+        <h2 onClick={() => setselected(true)} className={`tracking-[0.5rem] cursor-pointer transition-all duration-300 ease-out underline underline-offset-8 md:text-lg text-sm medium ${isScrolled ? "hover:text-gray-dark" : "hover:text-gray-darker"}`}>MENU</h2>
       </div>
 
       {/* navabar window */}

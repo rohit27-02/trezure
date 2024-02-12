@@ -41,7 +41,7 @@ const projects = () => {
                 <div className='flex items-center gap-[1rem]'>
 
                   <img className='w-[3rem] ' src={feature.icon} alt={feature.title} />
-                  <h1 className='text-xl medium'>{feature.title}</h1>
+                  <h2 className='text-xl medium'>{feature.title}</h2>
 
                 </div>
                 <p className='text-gray-light mt-[1rem] lighter'>{feature.des}</p>

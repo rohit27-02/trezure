@@ -88,7 +88,7 @@ const Slug = () => {
     <div className='bg-[#fcfbfa]'>
       <Banner text={"Blog"}/>
       {post && <div className='container regular max-sm:mb-10 text-gray-dark w-[22rem] md:w-[70rem]  space-y-6 mx-auto'>
-        <h1 className='md:text-4xl text-xl text-gray-darker mt-[2rem] md:mt-[6rem] bold'>{post.title}</h1>
+        <h2 className='md:text-4xl text-xl text-gray-darker mt-[2rem] md:mt-[6rem] bold'>{post.title}</h2>
         <div className='flex text-gray-darker border-t-2 py-4 border-gray-500 gap-6 text-xl font-bold items-center'>
           <img className='rounded-full md:w-16 md:h-16 w-8 h-8  object-cover object-center' src={post.author.image.asset.url} alt='author image'></img>
           <h2 className='max-sm:text-sm'>{post.author.name}</h2>

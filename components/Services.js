@@ -39,7 +39,7 @@ const Category = () => {
             <div className="relative w-[19rem] mb-4 overflow-hidden h-[18rem] pb-[100%] ">
               <img src="projects/3.jpg" alt="Your Image" className="absolute inset-0 hover:scale-105 ease-linear transition-all duration-300 w-full h-full object-cover" />
             </div>
-            <h1 className='max-sm:text-sm'>OFFICE</h1>
+            <h2 className='max-sm:text-sm'>OFFICE</h2>
             <div className='mt-[1rem] '>
               <Button text={"know more"} path={"/collections#office"} />
             </div>
