@@ -18,11 +18,7 @@ const Slideshow = () => {
                     loop
                 ></video>
             </div>
-
-
-
         </div>
-
     );
 };
 
