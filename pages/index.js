@@ -22,7 +22,7 @@ export default function Home() {
         <title>Unveil Elegance at Trezure Casa, the luxury furniture store</title>
         <meta name="description" content="Dive into the secrets of Trezure Casa, a luxury furniture store that offers extraordinary pieces reflecting unparalleled quality, and timeless design." />
       </Head>
-      <Popup />
+      {/* <Popup /> */}
       <Carousel />
       <div className='px-4'>
         <h1 className='md:text-[48px] mx-auto max-w-[50rem] text-center mt-20 text-brown-light border p-4 border-brown-light  text-xl tracking-wider  md:leading-[3.5rem] medium'>Elevate Your Space: India&apos;s Premier Luxury Furniture Store</h1>
