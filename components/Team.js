@@ -18,7 +18,7 @@ const Team = () => {
             <div className='regular max-sm:w-[20rem] w-[30rem] '>
                 <Fade cascade direction='up' triggerOnce>
                     <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>OUR TEAM</h2>
-                    <h2 className='text-[40px] max-sm:text-xl tracking-wider medium'>OUR TALENT TEAM</h2>
+                    <h3 className='text-[40px] max-sm:text-xl tracking-wider medium'>OUR TALENT TEAM</h3>
                     <p className='text-gray-light max-sm:text-sm text-lg max-sm:my-[1rem] my-[2rem]'>Meet our Team of luxury connoisseurs, working conscientiously to deliver excellence by harnessing the finest designer products from the most luxurious range of international furniture collection to uplift, elevate, and transform your residential, outdoor, as well as corporate spaces.</p>
                     <Button text={"VIEW MORE"} path={"/story#team"} />
                 </Fade>

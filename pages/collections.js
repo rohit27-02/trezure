@@ -3,6 +3,7 @@ import { GoArrowDownRight } from "react-icons/go"
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Router from "next/router";
+import Link from "next/link";
 
 const Collections = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -47,10 +48,10 @@ const Collections = () => {
                     <div className='flex max-sm:flex-col-reverse items-center max-sm:py-10 h-[110vh] max-sm:gap-[8rem] md:h-screen max-sm:w-[24rem] w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-2/5'>
                             <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>HOME</h2>
-                            <p>Gorgeous range of global furniture infused with character and charm galore— seamlessly fitting into your first and second homes and equally enticing for a contemporary setting.
+                            <p className="mb-4">Gorgeous range of global furniture infused with character and charm galore— seamlessly fitting into your first and second homes and equally enticing for a contemporary setting.
                                 The most extensive assortment of home furniture collection laced with contemporary designs, trending in the international circles and built to last.
                                 Stunning, superb, and stylish porch furniture collection to bring your outdoors to life.</p>
-                            <button onClick={() => Router.push("/collections/home")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <Link href={"/collections/home"} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker'>DISCOVER MORE</Link>
                         </div>
                         <div className="relative">
                             <img src="/animation/sofa.png" className="max-sm:w-[24rem] max-sm:ml-[1rem] w-[40rem] -mt-[8rem] ml-[4rem]" alt="sofa" />
@@ -82,10 +83,10 @@ const Collections = () => {
                     <div className='flex max-sm:flex-col-reverse max-sm:w-[24rem] max-sm:py-10  flex-row-reverse text-right items-center h-[80vh] max-sm:gap-[8rem] md:h-screen w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
                             <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OUTDOOR</h2>
-                            <p>An impressive variety of patio furniture and accent pieces to impart a similar sense of sophistication and poise to your outdoor space that is found inside your home.
+                            <p className="mb-4">An impressive variety of patio furniture and accent pieces to impart a similar sense of sophistication and poise to your outdoor space that is found inside your home.
                                 Lose track of time in the company of your loved ones, lazing comfortably in our hand-picked global outdoor furniture range.
                                 Stunning and Ergonomic assortments sourced from the globally renowned designer furniture brands.</p>
-                            <button onClick={() => Router.push("/collections/outdoor")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <Link href={"/collections/outdoor"} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker'>DISCOVER MORE</Link>
                         </div>
                         <div className="relative">
                             <img src="/animation/table.jpg" className="w-[10rem] max-sm:pt-[4rem] md:w-[14rem] md:mr-[12rem]" alt="table" />
@@ -114,9 +115,9 @@ const Collections = () => {
                     <div className='flex max-sm:flex-col-reverse items-center max-sm:py-10 h-[80vh] max-sm:gap-[8rem] md:h-screen max-sm:w-[24rem] w-[80vmax] max-w-[90rem] mx-auto'>
                         <div className='w-[20rem] md:w-1/2'>
                             <h2 className='medium mb-[0.5rem] text-[40px] text-gray-darker'>OFFICE</h2>
-                            <p>A contemporary collection of internationally trending office furniture that is both comfortable and stylish.
+                            <p className="mb-4">A contemporary collection of internationally trending office furniture that is both comfortable and stylish.
                                 Ergonomic and luxurious office furniture designs that boost productivity and have the personality of their own</p>
-                            <button onClick={() => Router.push("/collections/office")} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker mt-[2.5rem]'>DISCOVER MORE</button>
+                            <Link href={"/collections/office"} className='text-sm transition-all duration-200 text-[#c3b8a5] underline underline-offset-8 tracking-[0.4rem] hover:text-gray-darker'>DISCOVER MORE</Link>
                         </div>
                         <div className="relative">
                             <img src="/animation/office-table.png" className="w-[16rem] md:w-[24rem] md:ml-[10rem]" alt="table" />

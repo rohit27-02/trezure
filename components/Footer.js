@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import Router from 'next/router';
 import React,{useState} from 'react';
 import { AiOutlineMail } from "react-icons/ai";
@@ -28,10 +29,10 @@ const Footer = () => {
             <a target='_blank' href='https://www.linkedin.com/company/trezure-casa/' className='cursor-pointer hover:bg-white hover:text-gray-darker transition-all duration-300'><BiLogoLinkedin /></a>
           </div>
           <div className='flex max-sm:flex-col text-lg gap-[2rem]'>
-            <button onClick={()=>Router.push("/story")} className='hover:text-white transition-all duration-300'>About</button>
-            <button className='hover:text-white transition-all duration-300'>Licenses</button>
-            <button className='hover:text-white transition-all duration-300'>Policies</button>
-            <button onClick={()=>Router.push("/contact-us")} className='hover:text-white transition-all duration-300'>Contact</button>
+            <Link href={"/story"} className='hover:text-white transition-all duration-300'>About</Link>
+            <Link href={"/"} className='hover:text-white transition-all duration-300'>Licenses</Link>
+            <Link href={"/"} className='hover:text-white transition-all duration-300'>Policies</Link>
+            <Link href={"/contact-us"} className='hover:text-white transition-all duration-300'>Contact</Link>
           </div>
         </div>
         <h2 className='tracking-[0.2rem] mt-[2rem] max-sm:text-center w-fit mx-auto text-xs'>COPYRIGHT 2024 © TREZURE. ALL RIGHTS RESERVED.</h2>

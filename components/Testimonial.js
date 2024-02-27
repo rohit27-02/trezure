@@ -43,7 +43,7 @@ const Testimonial = () => {
       <div className='mx-auto w-fit text-center mb-[3rem]'>
         <Fade cascade direction='up' triggerOnce>
           <h2 className='text-lg max-sm:text-sm text-brown-light'>Testimonial</h2>
-          <h2 className='text-3xl max-sm:text-xl text-gray-darker'>Customer Feedback</h2>
+          <h3 className='text-3xl max-sm:text-xl text-gray-darker'>Customer Feedback</h3>
         </Fade>
       </div>
 
@@ -79,11 +79,11 @@ const Testimonial = () => {
                 <div className='w-[4rem] bg-gray-dark h-[4rem] max-sm:w-[8rem] max-sm:h-[4.5rem] overflow-hidden rounded-full'>
                   <img className='h-[4rem] w-[4rem]  object-cover' src={item.img} alt={item.name} />
                 </div>
-                <h2 className='text-xl medium  text-gray-darker'>
+                <h4 className='text-xl medium  text-gray-darker'>
                   {item.name}
                   <br></br>
                   <span className='text-gray-light regular text-base'>{item.location}</span>
-                </h2>
+                </h4>
               </div>
               <p className=''>{item.content}</p>
             </div>

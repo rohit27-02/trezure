@@ -7,6 +7,7 @@ import Head from 'next/head';
 function MyApp({ Component, pageProps }) {
   return <>
     <Head>
+    <link rel="canonical" href="http://trezurecasa.com"/>
     <script
           dangerouslySetInnerHTML={{
             __html: `

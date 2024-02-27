@@ -17,7 +17,7 @@ const Projects = () => {
         <div className='md:h-[50rem] text-white w-full bg-gray-darker'>
             <div className='md:pt-[5vmax] p-[1rem] md:px-[10vmax]'>
                 <h2 className='text-[#c3b8a5] max-sm:text-xs tracking-[0.4rem]'>OUR PROJECTS</h2>
-                <h2 className='text-[40px] max-sm:text-xl tracking-wider medium'>JUST FOR YOUR HOME</h2>
+                <h3 className='text-[40px] max-sm:text-xl tracking-wider medium'>JUST FOR YOUR HOME</h3>
             </div>
             <div className=''>
                 <Carousel

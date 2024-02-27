@@ -19,7 +19,7 @@ const Contact = () => {
             <Banner text={"Contact Us"} />
             <div className='max-sm:w-[20rem] w-[80vmax] flex max-sm:flex-col gap-[4rem] max-w-[90rem] py-8 md:my-[7rem] mx-auto'>
                 <div className='md:w-[45%] gap-[1rem] flex flex-col'>
-                    <h1 className='text-xl md:text-4xl medium'>YOUR INFORMATION</h1>
+                    <h2 className='text-xl md:text-4xl medium'>YOUR INFORMATION</h2>
                     <form className='[&>*]:outline-none [&>*]:mt-[1rem] [&>*]:border-b [&>*]:w-full font-normal [&>*]:py-[0.5rem]'>
                         <input type='text' value={name} onChange={(e)=>setname(e.target.value)} placeholder='Full name' />
                         <input type='' value={phone} onChange={(e)=>setphone(e.target.value)} placeholder='Phone number' />

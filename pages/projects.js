@@ -25,7 +25,7 @@ const projects = () => {
         <div className='md:w-[40%] w-[24rem] h-full flex flex-col gap-2 md:gap-[2rem]'>
           <img className='w-full max-sm:hidden h-[55%]' src='/projects/1.jpg' alt='banner image' />
           <Fade direction='up' duration={1000} triggerOnce >
-            <h1 className='md:text-5xl text-xl bold'>Our Project</h1>
+            <h2 className='md:text-5xl text-xl bold'>Our Project</h2>
           </Fade>
           <p className='text-gray-light text-justify'>Our highly efficient and proficient team makes sure that you are worthy of depicting a class and beauty that reigns supreme and takes priority over anything ordinary. Our project execution process is profoundly intertwined with our culture of stopping at nothing short of the best.From the time of preparation and sourcing, quality management to shipment and everything in between, we guarantee that every aspect of the project implementation process is managed with the utmost accuracy, while at the same time keeping a close watch on even the tiniest element involved.</p>
         </div>
@@ -41,7 +41,7 @@ const projects = () => {
                 <div className='flex items-center gap-[1rem]'>
 
                   <img className='w-[3rem] ' src={feature.icon} alt={feature.title} />
-                  <h2 className='text-xl medium'>{feature.title}</h2>
+                  <h4 className='text-xl medium'>{feature.title}</h4>
 
                 </div>
                 <p className='text-gray-light mt-[1rem] lighter'>{feature.des}</p>

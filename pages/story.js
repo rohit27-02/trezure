@@ -146,7 +146,7 @@ const Story = () => {
           </div>
           <div className='w-[20rem] max-sm:mt-[8rem] md:w-[25rem] flex flex-col '>
             <Fade cascade triggerOnce direction='up'>
-              <h2 className='text-4xl medium text-gray-darker'>How we do</h2>
+              <h3 className='text-4xl medium text-gray-darker'>How we do</h3>
               <p className='text-gray-light max-sm:text-sm mt-[1rem]'>Through the seamless coordination between our warehousing facility, Flagship, and Franchise Stores, we bring the world-class designer products to you— each one globally sourced after undergoing stringent quality checks.</p>
             </Fade>
 
@@ -154,7 +154,7 @@ const Story = () => {
 
               <Fade direction='up' cascade triggerOnce>
                 <div>
-                  <h2 className='tracking-wider'>Planning and sourcing</h2>
+                  <h4 className='tracking-wider'>Planning and sourcing</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500/80 to-amber-600/80"
@@ -165,7 +165,7 @@ const Story = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className='tracking-wider'>Project coordination</h2>
+                  <h4 className='tracking-wider'>Project coordination</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow-sm w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500 to-amber-600/80"
@@ -176,7 +176,7 @@ const Story = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className='tracking-wider'>Quality control</h2>
+                  <h4 className='tracking-wider'>Quality control</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow-sm w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500 to-amber-600/80"
@@ -187,7 +187,7 @@ const Story = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className='tracking-wider'>Loading, shipping & custom clearance</h2>
+                  <h4 className='tracking-wider'>Loading, shipping & custom clearance</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow-sm w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500 to-amber-600/80"
@@ -198,7 +198,7 @@ const Story = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className='tracking-wider'>Delivery & installations</h2>
+                  <h4 className='tracking-wider'>Delivery & installations</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow-sm w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500 to-amber-600/80"
@@ -209,7 +209,7 @@ const Story = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className='tracking-wider'>Customer care</h2>
+                  <h4 className='tracking-wider'>Customer care</h4>
                   <div className=" overflow-hidden bg-white h-[0.4rem] ">
                     <motion.div
                       className="h-full drop-shadow-sm w-[20rem] bg-gradient-to-r from-gray-400 via-amber-500 to-amber-600/80"
@@ -231,7 +231,7 @@ const Story = () => {
       <div className='flex py-8 items-center md:py-[6rem]'>
         <div className='w-[20rem] md:w-[40rem] max-sm:text-sm text-justify mx-4 md:mx-[6rem] flex flex-col gap-[2rem]'>
           <Fade cascade direction='up' triggerOnce>
-            <h2 className='md:text-4xl text-xl bold text-gray-darker'>QUALITY & DESIGN AT TREZURE CASA</h2>
+            <h3 className='md:text-4xl text-xl bold text-gray-darker'>QUALITY & DESIGN AT TREZURE CASA</h3>
             <p className='medium  text-gray-darker'>At Trezure Casa, our commitment to excellence in quality and design is the cornerstone of our multinational brand. We take great pride in curating the finest furniture from renowned global brands:
             </p>
             <p><strong>
@@ -258,22 +258,22 @@ const Story = () => {
 
       <div className='flex w-screen items-center justify-end'>
         <div className='w-[20rem] mx-4 md:mx-[6rem] space-y-[2rem]'>
-          <h2 className='text-3xl max-sm:text-xl text-gray-darker'>Who We Are</h2>
+          <h3 className='text-3xl max-sm:text-xl text-gray-darker'>Who We Are</h3>
           <div className='space-y-[1rem]'>
-            <div onClick={() => setactive(1)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 1 ? "md:text-3xl  text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Vision</h2><HiOutlineArrowDownRight className={active == 1 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(2)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 2 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Mission</h2><HiOutlineArrowDownRight className={active == 2 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h2>Purpose</h2><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
-            <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h2>Values</h2><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
+            <div onClick={() => setactive(1)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 1 ? "md:text-3xl  text-gray-darker " : "max-sm:text-sm text-xl "}`}><h4>Vision</h4><HiOutlineArrowDownRight className={active == 1 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(2)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 2 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h4>Mission</h4><HiOutlineArrowDownRight className={active == 2 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(3)} className={`flex w-full transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 3 ? "md:text-3xl text-gray-darker " : "max-sm:text-sm text-xl "}`}><h4>Purpose</h4><HiOutlineArrowDownRight className={active == 3 ? "w-6" : "w-4"} /></div>
+            <div onClick={() => setactive(4)} className={`flex w-full relative transition-all duration-150 hover:text-gray-darker cursor-pointer justify-between border-b items-center pb-2 ${active == 4 ? "md:text-3xl text-gray-darker " : "text-xl max-sm:text-sm"}`}><h4>Values</h4><HiOutlineArrowDownRight className={active == 4 ? "w-6" : "w-4"} />
               {active == 4 && <div className='absolute top-14 md:top-16 md:flex-wrap text-gray-dark items-center flex gap-4 [&>*]:min-w-fit max-sm:overflow-x-scroll w-[10rem] md:w-[20rem] text-sm'>
-                <div onClick={() => setactivesub(1)} className={`hover:text-gray-darker ${activesub == 1 ? "text-gray-darker text-lg" : ""}`}>Integrity</div>
-                <div onClick={() => setactivesub(2)} className={`hover:text-gray-darker ${activesub == 2 ? "text-gray-darker text-lg" : ""}`}>Passion</div>
-                <div onClick={() => setactivesub(3)} className={`hover:text-gray-darker ${activesub == 3 ? "text-gray-darker text-lg" : ""}`}>Honesty</div>
-                <div onClick={() => setactivesub(4)} className={`hover:text-gray-darker ${activesub == 4 ? "text-gray-darker text-lg" : ""}`}>Customer Care</div>
-                <div onClick={() => setactivesub(5)} className={`hover:text-gray-darker ${activesub == 5 ? "text-gray-darker text-lg" : ""}`}>Ethics</div>
-                <div onClick={() => setactivesub(6)} className={`hover:text-gray-darker ${activesub == 6 ? "text-gray-darker text-lg" : ""}`}>Partner Care</div>
-                <div onClick={() => setactivesub(7)} className={`hover:text-gray-darker ${activesub == 7 ? "text-gray-darker text-lg" : ""}`}>Employee Care</div>
-                <div onClick={() => setactivesub(8)} className={`hover:text-gray-darker ${activesub == 8 ? "text-gray-darker text-lg" : ""}`}>Professionalism</div>
-                <div onClick={() => setactivesub(9)} className={`hover:text-gray-darker ${activesub == 9 ? "text-gray-darker text-lg" : ""}`}>Innovation</div>
+                <h5 onClick={() => setactivesub(1)} className={`hover:text-gray-darker ${activesub == 1 ? "text-gray-darker text-lg" : ""}`}>Integrity</h5>
+                <h5 onClick={() => setactivesub(2)} className={`hover:text-gray-darker ${activesub == 2 ? "text-gray-darker text-lg" : ""}`}>Passion</h5>
+                <h5 onClick={() => setactivesub(3)} className={`hover:text-gray-darker ${activesub == 3 ? "text-gray-darker text-lg" : ""}`}>Honesty</h5>
+                <h5 onClick={() => setactivesub(4)} className={`hover:text-gray-darker ${activesub == 4 ? "text-gray-darker text-lg" : ""}`}>Customer Care</h5>
+                <h5 onClick={() => setactivesub(5)} className={`hover:text-gray-darker ${activesub == 5 ? "text-gray-darker text-lg" : ""}`}>Ethics</h5>
+                <h5 onClick={() => setactivesub(6)} className={`hover:text-gray-darker ${activesub == 6 ? "text-gray-darker text-lg" : ""}`}>Partner Care</h5>
+                <h5 onClick={() => setactivesub(7)} className={`hover:text-gray-darker ${activesub == 7 ? "text-gray-darker text-lg" : ""}`}>Employee Care</h5>
+                <h5 onClick={() => setactivesub(8)} className={`hover:text-gray-darker ${activesub == 8 ? "text-gray-darker text-lg" : ""}`}>Professionalism</h5>
+                <h5 onClick={() => setactivesub(9)} className={`hover:text-gray-darker ${activesub == 9 ? "text-gray-darker text-lg" : ""}`}>Innovation</h5>
               </div>}
             </div>
           </div>
@@ -288,7 +288,7 @@ const Story = () => {
 
         <Fade direction='up' cascade triggerOnce>
           <h2 className='cool text-[54px] max-sm:text-[40px] text-brown-light w-fit mx-auto '>members</h2>
-          <h2 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h2>
+          <h3 className='text-4xl max-sm:text-xl mx-auto w-fit md:-mt-[1.5rem] md:mb-[3rem] text-gray-darker lighter'>Meet Our Teams</h3>
         </Fade>
         <img src='group-photo.jpg' alt='group photo' className='w-[60rem] mx-auto' />
         {/* <Carousel
